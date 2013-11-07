@@ -1,0 +1,59 @@
+/* app css stylesheet */
+
+
+
+.menu li {
+  padding: 20px;
+  list-style: none;
+}
+
+ @media(max-width: 767px) {
+  .menu li {
+    display:inline-block;
+    margin:auto;
+    
+  }
+
+  .menu {text-align: center;
+  }
+    
+}
+
+.black {
+  background-color: #1F1B1B;
+}
+
+p {
+  color: white;
+}
+
+.iconstyle {
+  color:white;
+  
+}
+.iconstyle:hover {
+  text-decoration: none;
+  color:#999999;
+
+}
+.sidebar-nav-fixed {
+    position:fixed;
+    top:100;
+    left:0;
+}
+.top {
+  color:white;
+  font-family:andale mono, monospace;
+}
+
+@media (max-width: 767px) {
+  .sidebar-nav-fixed {
+    position:relative;
+  }
+}
+
+.content {
+  padding: 60px;
+}
+
+.nav, .pagination, .carousel a { cursor: pointer; }

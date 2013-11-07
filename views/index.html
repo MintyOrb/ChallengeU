@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <title>Angular Express Seed App</title>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/bootstrap.css">
+    <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+    <!-- // <script src="public/js/lib/angular/angular.js"></script> -->
+    <script src="public/js/angular.min.js"></script>
+    <script src="public/js/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script src="public/js/app.js"></script>
+    <script src="public/js/services.js"></script>
+    <script src="public/js/controllers.js"></script>
+    <script src="public/js/filters.js"></script>
+    <script src="public/js/directives.js"></script>
+  </head>
+  <body class="black">
+      <div class="navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+          <h3 class="text-center top">Challenge U </h3>
+        </div>
+      </div>
+        <div class="container-fluid">
+          <div class="row-fluid">
+            <div class="span2 sidebar-nav-fixed">
+              <ul class="menu">
+                <li class="text-center"><a href="home"><i class="icon-magnet icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="profile"> <i class="icon-user icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="theList"> <i class="icon-list icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="settings"> <i class="icon-cogs icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="about"> <i class="icon-question icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+              </ul>
+            </div>
+
+            <div ng-view class="span10 offset2 overflow"></div>
+
+            <div class="offset2 text-center">
+              <h5>Copyright Challenge U - 2013</h5>
+            </div>
+          </div>
+        </div>
+
+ 
+  </body>
+</html>
