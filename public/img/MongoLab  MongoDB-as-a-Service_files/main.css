@@ -1,0 +1,2466 @@
+S/*****************************************************************************
+ * MongoLab base skin overrides
+ *****************************************************************************/
+#MongoDBInc #header .logo a {
+    background-image: url("/css/images/mongodb-logo-215x56.png") !important;
+}
+
+#MongoDBInc #header .logo a {
+    background-image: url("/css/images/mongodb-logo-215x56.png") !important;
+}
+
+#MongoDBInc #preFooterBar {
+  background: #3a2918;
+}
+
+
+/*****************************************************************************
+ * GENERAL - Background Colors
+ *****************************************************************************/
+#body {
+    background-color: #1b242c;
+}
+
+#MongoDBInc #body {
+    background-color: #ffffff;
+}
+
+#header {
+  background-color: #1b242c; /* fallback color if gradients are not supported */
+  background-image: -webkit-linear-gradient(top, #3e3f40, #1b242c); /* For Chrome and Safari */
+  background-image:    -moz-linear-gradient(top, #3e3f40, #1b242c); /* For old Fx (3.6 to 15) */
+  background-image:     -ms-linear-gradient(top, #3e3f40, #1b242c); /* For pre-releases of IE 10*/
+  background-image:      -o-linear-gradient(top, #3e3f40, #1b242c); /* For old Opera (11.1 to 12.0) */ 
+  background-image:   linear-gradient(to bottom, #3e3f40, #1b242c); /* Standard syntax; must be last */
+}
+
+#MongoDBInc #header {
+  background: #3a2918;
+}
+
+/*****************************************************************************
+ * GENERAL - Fonts
+ *****************************************************************************/
+body {
+    font-family: "Roboto", sans-serif !important;
+    color: #e4e6e6;
+    text-align: left;
+    font-size:14px;
+    font-weight:300;
+}
+
+#MongoDBInc body {
+    color: #494949;
+}
+
+td.documentField, #viewSearchesDialog td {
+    font-size:12px;
+}
+
+#tabs {
+    color: #c9cccd;
+}
+
+#MongoDBInc #tabs {
+    color: inherit;
+}
+
+#sidebar {
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+#sidebar pre, #sidebar code {
+    font-size: 12px;
+}
+
+pre, code, .value {
+    font-family: "Droid Sans Mono", monospace;
+    color: #BBBDBD;
+    line-height: 1.4em;
+    font-size: 12px;
+}
+
+#MongoDBInc pre, #MongoDBInc code, #MongoDBInc .value {
+    color: #4d4d4d;
+}
+
+#mainCol pre, #mainCol code {
+    font-size: 11.5px;
+c}
+
+textarea.code {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+}
+
+.ui-dialog pre, .ui-dialog code {
+    color: #555;
+}
+
+.tip {
+    font-size: 90%;
+}
+
+.tip:before {
+    content: " (";
+}
+
+.tip:after {
+    content: ") ";
+}
+
+span.required:after {
+    content: "*";
+    color: red;
+}
+
+td.center { text-align: center; }
+
+.footnote {
+    font-size: 9.5px;
+    color: #999;
+}
+
+.errorColor {
+    color: red;
+}
+
+em, strong {
+    font-weight: bold;
+}
+
+
+/*****************************************************************************
+ * GENERAL - Layout
+ *****************************************************************************/
+body {
+    min-width: 815px;
+}
+
+#headerAccountLinks {
+    float: right;
+    margin-top: 5px;
+    padding-right: 28px;
+}
+
+#MongoDBInc #headerAccountLinks {
+    display:none;
+}
+
+#body {
+    padding: 30px 90px 120px 60px; /* 30 + 120 - also in global-includes.jsp */
+    min-height: 1000px; /* also set dynamically in global-includes.jsp */
+}
+
+#body #colWrapper {
+    width: 1182px; /* 100 + 675 + 50 + 357 - also in show-collection.jsp */
+}
+
+#body.about #colWrapper,
+#body.legal #colWrapper,
+#body.support #colWrapper {
+    width: auto;
+}
+
+#body #colWrapper #mainCol {
+    
+    width: 765px;
+    float: left;
+  /*overflow: auto;*/
+}
+
+#body.about #colWrapper #mainCol {
+    float: none;
+    margin-left: auto; margin-right: auto;
+}
+
+#body.pricing #colWrapper #mainCol {
+    width: 750px;
+}
+
+#body #colWrapper #sidebar {
+    width: 307px;
+    height: 100%;
+    float: left;
+    margin-left: 45px;
+}
+
+textarea.code#HTTPGET {
+    height: 2000px;
+}
+
+#preFooterBar .links { display:none; }
+#footer .siteLinks * { color: #aaa !important; }
+
+p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 19px;
+}
+
+.tinyLineBreak { height: 3px; }
+.f-left { float: left; }
+.f-right { float: right; }
+.clearer { clear: both; }
+
+.bigLineBreak { height: 10px; }
+
+.nowrap { white-space: nowrap; }
+
+.roundedCorners {
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+/*****************************************************************************
+ * GENERAL - Header styles
+ *****************************************************************************/
+h1 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: default;
+    margin-top: 0px;
+}
+
+#sidebar h1 {
+    color: white;
+    font-size: 17px;
+    display:inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#MongoDBInc h1 {
+    color: #271B15;
+}
+
+h2 {
+    margin: 33px 0 20px !important;
+    font-size: 22px;
+    color: white;
+    clear: both;
+    cursor: default;
+    
+}
+
+#MongoDBInc h2 {
+    color: #271B15;
+}
+
+
+div.h2 {
+    margin-top: 30px;
+    border-top: 1px solid #3f4a51;
+}
+
+div.h2.first, div.h2:first-child {
+    margin-top: 0px;
+    border-top: none;
+}
+
+#sidebar h2 {
+    margin: 20px 0 20px !important;
+    font-size: 13px;
+}
+
+#tabs h2 {
+    margin: 15px 0 20px !important;
+}
+
+#subtabs h2 {
+    margin-top: 5px;
+}
+
+.stdForm h2 {
+    font-size: 18px;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+h3 {
+    margin: 30px 0 20px;
+    font-size: 16px;
+    color: white;
+}
+
+#tools h3 {
+    margin: 10px 0 10px 0;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+
+/*****************************************************************************
+ * GENERAL - CSS buttons
+*****************************************************************************/
+
+a.button {
+    float:right;
+    margin-left: 8px;
+    font-family: "Museo Sans",sans-serif !important;
+    font-size: 12px;
+    font-weight: 500;
+    cursor:pointer;
+    color: #ffffff !important;
+    padding: 8px 18px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 0px solid #000000;
+    -moz-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.4),
+    inset 0px 1px 0px rgba(255,255,255,0.4);
+    -webkit-box-shadow:
+    0px 1px 3px rgba(000,000,000,0.4),
+    inset 0px 1px 0px rgba(255,255,255,0.4);
+    box-shadow:
+    0px 1px 3px rgba(000,000,000,0.4),
+    inset 0px 1px 0px rgba(255,255,255,0.4);
+
+    background: -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background:    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background:     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background:      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background:   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+#MongoDBInc a.button {
+    background: #5daa46;
+}
+
+a.button:hover {
+    background: -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background:    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background:     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background:      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background:   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+#MongoDBInc a.button:hover {
+    background: #53a03c;
+}
+
+a.button.disabled {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+    cursor:default;
+}
+
+a.button.icon {
+    padding-left: 32px;    
+    background-color: #293036; /* fallback color if gradients are not supported */
+}
+
+a.button.icon.disabled {
+    color: #464c51 !important;
+}
+
+#MongoDBInc a.button.icon.disabled {
+    color: #ccc !important;
+}
+
+/* "Create new" button */
+a.button.create {
+    background: url("images/button-icons/flash.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+a.button.create:hover {
+    background: url("images/button-icons/flash.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/flash.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+a.button.create.disabled {
+    color: #464c51 !important;
+    background: #283138 url("images/button-icons/flash-disabled.png") no-repeat 10px center;
+}
+
+/* "Clone existing" button */
+a.button.clone {
+    background: url("images/button-icons/clone.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+a.button.clone:hover {
+    background: url("images/button-icons/clone.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/clone.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+a.button.clone.disabled {
+    color: #464c51 !important;
+    background: #283138 url("images/button-icons/clone-disabled.png") no-repeat 10px center;
+}
+
+/* "Create from backup" button */
+a.button.restore {
+    background: url("images/button-icons/restore.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+a.button.restore:hover {
+    background: url("images/button-icons/restore.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restore.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+a.button.restore.disabled {
+    color: #464c51 !important;
+    background: #283138 url("images/button-icons/restore-disabled.png") no-repeat 10px center;
+}
+
+/* "Restart X" button */
+a.button.restart {
+    background: url("images/button-icons/restart.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+#MongoDBInc a.button.restart {
+    background: #5daa46 url("images/button-icons/restart.png") no-repeat 10px center;
+}
+a.button.restart:hover {
+    background: url("images/button-icons/restart.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/restart.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+#MongoDBInc a.button.restart:hover {
+    background: #53A03C url("images/button-icons/restart.png") no-repeat 10px center;
+}
+
+/* "Delete X" button */
+a.button.delete {
+    background: url("images/button-icons/delete.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+#MongoDBInc a.button.delete {
+    background: #5daa46 url("images/button-icons/delete.png") no-repeat 10px center;
+}
+a.button.delete:hover {
+    background: url("images/button-icons/delete.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/delete.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+#MongoDBInc a.button.delete:hover {
+    background: #53A03C url("images/button-icons/delete.png") no-repeat 10px center;
+}
+a.button.delete.disabled {
+    background: #283138 url("images/button-icons/delete-disabled.png") no-repeat 10px center;
+}
+#MongoDBInc a.button.delete.disabled {
+    background: #f5f6f7 url("images/button-icons/delete-disabled.png") no-repeat 10px center;
+}
+
+
+/* "Add X" button */
+a.button.add {
+    background: url("images/button-icons/add.png") no-repeat 10px center, -webkit-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/add.png") no-repeat 10px center,    -moz-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/add.png") no-repeat 10px center,     -ms-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/add.png") no-repeat 10px center,      -o-linear-gradient(top, #50565c 0%, #3b3b3b 50%, #293036);
+    background: url("images/button-icons/add.png") no-repeat 10px center,   linear-gradient(to bottom, #50565c 0%, #3b3b3b 50%, #293036);
+}
+#MongoDBInc a.button.add {
+    background: #5daa46 url("images/button-icons/add.png") no-repeat 10px center;
+}
+a.button.add:hover {
+    background: url("images/button-icons/add.png") no-repeat 10px center, -webkit-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/add.png") no-repeat 10px center,    -moz-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/add.png") no-repeat 10px center,     -ms-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/add.png") no-repeat 10px center,      -o-linear-gradient(top, #4d5357 0%, #3b3b3b 50%, #1c2227);
+    background: url("images/button-icons/add.png") no-repeat 10px center,   linear-gradient(to bottom, #4d5357 0%, #3b3b3b 50%, #1c2227);
+}
+#MongoDBInc a.button.add:hover {
+    background: #53A03C url("images/button-icons/add.png") no-repeat 10px center;
+}
+a.button.add.disabled {
+    background: #283138 url("images/button-icons/add-disabled.png") no-repeat 10px center;
+}
+
+
+/*****************************************************************************
+ * GENERAL - Links, mouseovers, and more buttons
+ *****************************************************************************/
+
+.link {
+    cursor: pointer;
+}
+
+#headerAccountLinks a:link, #headerAccountLinks a:visited, #headerAccountLinks a:hover, #headerAccountLinks a:active,
+#mainCol a:link, #mainCol a:visited, #mainCol a:hover, #mainCol a:active,
+a.link {
+    cursor: pointer;
+    color: #79ccf5;
+    text-decoration: underline;
+}
+
+#MongoDBInc #headerAccountLinks a:link, #MongoDBInc #headerAccountLinks a:visited, #MongoDBInc #headerAccountLinks a:hover, #MongoDBInc #headerAccountLinks a:active,
+#MongoDBInc #mainCol a:link, #MongoDBInc #mainCol a:visited, #MongoDBInc #mainCol a:hover, #MongoDBInc #mainCol a:active,
+#MongoDBInc a.link {
+    color: #006cbc;
+}
+
+#mainCol h1 a:hover {
+    color: inherit !important;
+}
+
+a.button, li a {
+    text-decoration: none !important;
+}
+
+#sidebar li a {
+    text-decoration: underline !important;
+}
+
+#mainCol td a:link, #mainCol td a:visited, #mainCol td a:hover, #mainCol td a:active {
+    color: #C9CCCD !important;
+    text-decoration: none !important;
+}
+
+p a {
+    color: #bbb;
+    text-decoration: underline;
+}
+
+.help {
+    cursor: help;
+}
+
+a:visited {
+    color: inherit;
+}
+
+
+
+a.blueButton{font-family:"Museo Sans",sans-serif !important;text-decoration:none;font-size:15px;font-weight:bold;color:#ffffff;padding:6px 17px;background:-moz-linear-gradient(top, #58afd9 0%, #3a97cb);background:-webkit-gradient(linear, left top, left bottom, from(#58afd9), to(#3a97cb));-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px;-moz-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.5),inset 0px 1px 0px rgba(255, 255, 255, 0.4);-webkit-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.5),inset 0px 1px 0px rgba(255, 255, 255, 0.4);box-shadow:0px 1px 1px rgba(0, 0, 0, 0.5),inset 0px 1px 0px rgba(255, 255, 255, 0.4);cursor:pointer;}
+
+a.blueButton:hover{background:-moz-linear-gradient(top, #78c3e4 0%, #227ab9);background:-webkit-gradient(linear, left top, left bottom, from(#78c3e4), to(#227ab9));-moz-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.6),inset 0px 1px 3px rgba(255, 255, 255, 0.6);-webkit-box-shadow:0px 1px 1px rgba(0, 0, 0, 0.6),inset 0px 1px 3px rgba(255, 255, 255, 0.6);box-shadow:0px 1px 1px rgba(0, 0, 0, 0.6),inset 0px 1px 3px rgba(255, 255, 255, 0.6);}
+
+a.blueButton:active{background:-moz-linear-gradient(top, #43a1d2 0%, #43a1d2);background:-webkit-gradient(linear, left top, left bottom, from(#43a1d2), to(#43a1d2));-moz-box-shadow:0px 1px 0px rgba(0, 0, 0, 0.3),inset 0px 1px 2px rgba(0, 0, 0, 0.1);-webkit-box-shadow:0px 1px 0px rgba(0, 0, 0, 0.3),inset 0px 1px 2px rgba(0, 0, 0, 0.1);box-shadow:0px 1px 0px rgba(0, 0, 0, 0.3),inset 0px 1px 2px rgba(0, 0, 0, 0.1);}
+
+
+#searchQuery a.button {
+    font-size: 80%;
+}
+
+.h1ActionBtns {
+    margin-top: -66px;
+    margin-bottom: 93px;
+}
+
+.h2ActionBtns {
+    margin-top: -51px;
+    margin-bottom: 80px;
+}
+
+.h2ResultBtns {
+    margin-bottom: 20px;
+}
+
+.h2ResultBtns a {
+    text-decoration: underline;
+}
+
+
+/*****************************************************************************
+ * Lists
+ *****************************************************************************/
+.pricing ol, .pricing ul,
+.legal ol, .legal ul,
+.message.ol, .message ul {
+    line-height: 125%;
+    margin: 0.5em 0 0 15px;
+    padding: 0;
+}
+
+.message ul { margin-left:0px; }
+.message li {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0px;
+    padding-bottom: 5px;
+}
+
+.pricing li,
+.legal li {
+    list-style-type: inherit;
+    margin-left: 30px;
+    padding-bottom: 5px;
+}
+
+ul.databaseTree {
+    list-style: none;
+    display: inline;
+}
+ul.databaseTree li {
+  /* background-image: url(); */
+  /* background-position: 0 1px;*/
+  /* background-repeat: no-repeat; */
+  padding-left: 20px;
+}
+
+
+/*****************************************************************************
+ * General - Forms
+ *****************************************************************************/
+form input[type=text], form input[type=password], form textarea {
+    color: #555;
+    font: inherit;
+    width: 100%;
+    height: 1.5em;
+    border: 1px solid #aaa;
+}
+
+form :focus {
+    background-color: lightyellow !important;
+}
+
+form select {
+    color: #555; font: inherit;
+    font-size: 90%;
+}
+
+
+form fieldset {
+    margin: 0 auto;
+}
+
+form fieldset > div {
+    padding-top: 7px;
+}
+
+form fieldset h2 + div {
+    padding-top: 0;
+}
+
+form fieldset label {
+    line-height: 1.3em;
+}
+
+form label.radioIndent {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+    line-height: 200%;
+}
+
+form textarea.createJSON {
+    height: 150px;
+}
+
+label input {
+    vertical-align: middle;
+}
+
+.message {
+    margin: 10px 0 15px 0;
+    clear: both;
+}
+
+.message.success {
+    border: 1px dotted #00EE00;
+    padding: 6px 20px;
+    color: #00EE00;
+}
+
+.message.warning {
+    border: 1px dotted #ffff66;
+    padding: 6px 20px;
+    color: #ffff66;
+}
+
+.message.error {
+    border: 1px dotted red;
+    padding: 6px 20px;
+    color: red;
+}
+
+.message.info {
+    font-size: 100%;
+    margin-left: auto; margin-right: auto;
+    width: 95%;
+}
+
+.message.announcement {
+    color: #00ee00; /* bright green */
+    padding: 20px 30px;
+    line-height: 25px;
+    cursor: pointer;
+    text-align: left;
+    moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    xborder:1px dotted #00ee00;
+    xborder:1px dotted white;
+    border:1px dotted #a6cbe1;
+}
+
+.message.announcement span {
+    vertical-align: middle;
+}
+
+.message.announcement:hover {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#19313f), to(#0D141C));
+    background-image: -webkit-linear-gradient(top, #19313f, #0D141C); /*safari 5.1+*/
+    background-image: -moz-linear-gradient(top, #19313f, #0D141C);/*firefox3.6+*/
+    background-image: -ms-linear-gradient(top, #19313f, #0D141C);/*ie 10*/
+    background-image: -o-linear-gradient(top, #19313f, #0D141C);/*opera*/
+    border:1px solid #00ee00;
+    border:1px solid #a6cbe1;
+}
+
+/*****************************************************************************
+ * GENERAL - Forms jQuery validation
+ *****************************************************************************/
+label.f-left {
+    width: 150px;
+}
+
+input.error, textarea.error {
+    xborder: 1px solid red !important;
+    border: 1px dashed red !important;
+    background: #faebe7 !important;
+}
+
+label.error {
+    display: inline;
+    clear: both;
+    min-height: 13px;
+    margin: 3px 0 0;
+    padding-left: 17px;
+    text-indent: 0px;
+    font-size: 10px;
+    line-height: 13px;
+    background: url(images/validation-pointer.png) 2px 1px no-repeat;
+    color: red;
+}
+
+/*****************************************************************************
+ * Sidebar
+ *****************************************************************************/
+.sidebarBtn.icon {
+    float: right;
+    margin-top: 20px;
+    margin-left: 0px;
+    background: transparent url(/css/images/icon-info.png) no-repeat;
+    width: 24px; height: 24px;
+    display: none;
+    cursor: pointer;
+}
+
+.sidebarBtn a {
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+#sidebar em {
+    font-style: italic;
+    font-weight: normal;
+}
+
+#sidebar pre {
+    font-size: 9.5px;
+}
+
+#sidebar li {
+    padding-bottom: 15px;
+}
+
+#sidebar h1:first-child {
+    margin-top: 1.25em;
+}
+
+#sidebar .generalHelp {
+    background-color: #28313a;
+}
+
+#MongoDBInc #sidebar .generalHelp {
+    background-color: #f5f6f7;
+}
+
+#sidebar .generalHelp>div {
+    margin: .5em 0;
+}
+
+#sidebar .generalHelp>div>div {
+    margin: .3em 0;
+}
+
+#sidebar .generalHelp>div>pre:first-child {
+    color: #ddd;
+}
+
+#sidebar .generalHelp .op {
+    color: #ddd;
+}
+
+#sidebar .generalHelp .code:before {
+    content: "  ";
+}
+
+/*****************************************************************************
+ * modals
+ *****************************************************************************/
+#modalMask, .modalMask {
+    position: absolute;
+    z-index: 9000;
+    background-color: #1b242c;
+    width: 100%; height: 3000px;
+    display: none;
+}
+
+#modalLoadingIndicator, .modalLoadingIndicator {
+    position: absolute;
+    width: 225px; height: auto;
+    display: none;
+    z-index: 9999;
+    background-color: white;
+    color: #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+div.modalMask {
+    display: block;
+    width: 100%;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+}
+
+div.modalLoadingIndicator {
+    width: 200px;
+    margin-left: -100px;
+    height: 150px;
+    margin-top: -75px;
+    display: block;
+}
+
+#modalLoadingIndicator>div, .modalLoadingIndicator>div {
+    padding: 0 25px;
+}
+
+#modalLoadingIndicator div .title, .modalLoadingIndicator div .title {
+    text-align: justify;
+    padding-top: 25px;
+    color: #555;
+}
+
+.loadingIndicator {
+    background: url(images/ajax-loader.gif) no-repeat;
+    width: 32px; height: 32px;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: none;
+}
+
+.loadingIndicatorBig {
+    background: url(images/ajax-loader-big.gif) no-repeat center !important;
+    width: 54px; height: 55px;
+    padding: 25px 0;
+    margin: auto;
+}
+
+/*****************************************************************************
+ * div#footer
+ *****************************************************************************/
+#footer {
+    text-align: center;
+    position: relative;
+    z-index: 100;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#copyright a {
+    color: #94c1db; /* dk. powder blue */
+    text-decoration: none;
+}
+
+#footerNav .divider:after {
+    content: " | "
+}
+
+#footerNav a {
+    color: #94c1db; /* dk. powder blue */
+}
+
+/*****************************************************************************
+ * div#body #mainCol
+ *****************************************************************************/
+#breadcrumbs {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+#breadcrumbs .label {
+    font-size: 10px;
+}
+
+#breadcrumbs .divider {
+    font-size: 8px;
+}
+
+#breadcrumbs .divider:after {
+    content: " , ";
+}
+
+#breadcrumbs a {
+    color: white;
+}
+
+.connectionInfo {
+    border: 1px solid #3f4a51;
+    padding: 20px 20px 10px 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background-color: #1b242c;
+}
+#MongoDBInc .connectionInfo {
+    border-color: #ebeded;
+    background-color: #fcfcfd;
+}
+
+.connectionInfo #horizontalFade {
+    float: right;
+    position:absolute;
+    z-index: 100;
+    height: 85%;
+    width: 200px;
+    margin-top: 5px;
+    top: 0; right: 0;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0,#1b242c)), color-stop(1, #1b242c));
+    background-image: -webkit-linear-gradient(left, rgba(27,36,44,0), rgba(27,36,44,1));
+    background-image:    -moz-linear-gradient(left, rgba(27,36,44,0), rgba(27,36,44,1));
+    background-image:     -ms-linear-gradient(left, rgba(27,36,44,0), rgba(27,36,44,1));
+    background-image:      -o-linear-gradient(left, rgba(27,36,44,0), rgba(27,36,44,1));
+    filter: progid:DXImageTransform.Microsoft.Gradient(
+    StartColorStr='#001b242c', EndColorStr='#FF1b242c', GradientType=1);
+}
+#MongoDBInc .connectionInfo #horizontalFade {
+    background-image: none;
+}
+
+.connectionInfo code {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    white-space: nowrap;
+    font-size: 12px;
+    text-indent: 15px;
+}
+
+.connectionInfo #internalConnectionInfo {
+    width: 633px;
+}
+
+.connectionInfo #internalConnectionInfo code {
+    display: inline;
+}
+
+.connectionInfo #connectionInfoContent {
+    float: left;
+}
+
+.connectionInfo #connectionInfoContent>div:first-child {
+    margin-bottom: 14px;
+}
+
+.label, .connectionInfo #connectionInfoContent div {
+    font-family: "Museo Sans", sans-serif;
+}
+
+.connectionInfo #mongoVersionInfo {
+    float: right;
+    height: 100%;
+    vertical-align: bottom;
+    width: 100%;
+    text-align: right;
+    position: relative;
+    z-index: 101;
+    padding-top: 0px;
+}
+
+.connectionInfo #mongoVersionInfo code {
+    display: inline;
+    font-size: 10px;
+}
+
+#keyMetadata {
+    border: 1px solid #a6cbe1; /* powder blue */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+#keyMetadata.success {
+    color: #00E62E;
+}
+
+.prompt {
+    color: #DAA8F5; /* purple */
+}
+
+#MongoDBInc .prompt {
+    color: inherit;
+}
+
+.prompt:after {
+    content: "% ";
+}
+
+.noData, .noDataStyle, .noDatabases, .noServerLogs, .noBackups {
+    color: #a6cbe1; /* powder blue */
+    font-style: italic;
+    padding-left: 10px;
+}
+
+#MongoDBInc .noData, #MongoDBInc .noDataStyle, #MongoDBInc .noDatabases, #MongoDBInc .noServerLogs, #MongoDBInc .noBackups {
+    color: inherit;
+}
+
+.noData:not(.customText):after {
+    content: "[None at this time]"
+}
+
+.noBackups:after {
+    content: "[No custom backups have been taken recently]"
+}
+
+.noDatabases:after {
+    content: "[No databases at this time]"
+}
+
+.noServerLogs:after {
+    content: "[No log files at this time]"
+}
+
+.noQueryReports:after {
+    content: "[No slow queries found at this time]"
+}
+
+
+.errorData {
+    color: #e00;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+table {
+    text-align: left;
+    width: 100%;
+    vertical-align: middle;
+    border-collapse: separate;
+    border-spacing: 0 2px;
+}
+
+th, td {
+    padding: 3px 10px;
+}
+
+th {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+th.help .helpIcon {
+    background: url(images/small-question-mark-icon.png) 3px -1px no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+}
+
+h2 .helpIcon {
+    background: url(images/small-question-mark-icon.png) 3px -1px no-repeat;
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+}
+
+.ui-dialog th {
+    color: #555;
+}
+
+.tableMode th {
+    text-transform: none;
+    background-color: #3f4852;
+}
+#MongoDBInc .tableMode th {
+    background-color: #f5f6f7;
+}
+
+thead tr:hover {
+    background: transparent;
+}
+
+tr {
+    height: 26px;
+}
+
+tr textarea {
+    height: 100px;
+    cursor: inherit;
+}
+
+tr.odd,  tr.odd.nolink:hover  { background-color: #3f4852; }
+tr.even, tr.even.nolink:hover { background-color: #515c65; }
+
+
+tr.odd:hover  { background-color: #353E48; }
+tr.even:hover { background-color: #47525B; }
+
+#MongoDBInc tr td:first-child { color: #006cbc; }
+#MongoDBInc tr.nolink td { color: inherit; }
+#MongoDBInc tr, #MongoDBInc tr.nolink:hover { background-color: #ffffff; }
+#MongoDBInc tr:hover { background-color: #ebebed; }
+#MongoDBInc thead tr { background-color: #ebebed; }
+
+
+td {
+    font-size: 13px;
+    width: inherit;
+}
+
+#listMode td {
+    font-size: 12px;
+}
+
+td.actionBtns {
+    width: 15px;
+    min-width: 0;
+    border: 0;
+    padding: 0;
+    background: #1b242c;
+}
+
+#MongoDBInc td.actionBtns {
+    background: inherit;
+}
+
+.tableMode td.actionBtns {
+    background: transparent;
+    padding-right: 5px;
+}
+
+td.actionBtns button, .connection-summary button, .cluster-summary button {
+    font-family: "Droid Sans Mono", monospace;
+    background: none;
+    border: 0;
+    padding: 0; margin: 2px;
+    cursor:pointer;
+
+}
+
+td.actionBtns button span {
+    font-size: 108%;
+}
+
+td.actionBtns button.makedefault {
+    background: url(images/icon-makedefault.png) left top no-repeat;
+    width: 24px; height: 24px;
+    box-shadow: none;
+}
+
+td.actionBtns button.makedefault:hover {
+    background-position: right top;
+}
+
+td.actionBtns button.delete,
+.connection-summary button.delete,
+.cluster-summary button.delete {
+    background: url(images/icon-delete.png) left top no-repeat;
+    width: 24px; height: 24px;
+    box-shadow: none;
+}
+
+td.actionBtns button.delete:hover,
+.cluster-summary button.delete:hover,
+.connection-summary button.delete:hover,
+.connection-summary button.edit:hover {
+    background-position: right top;
+}
+
+.connection-summary button.edit,
+.cluster-summary button.edit{
+    background: url(images/icon_edit.png) left top no-repeat;
+    width: 24px; height: 24px;
+    box-shadow: none;
+}
+
+.cluster-summary button.delete,
+.connection-summary button.delete,
+.connection-summary button.edit,
+.cluster-summary button.edit{
+    float: right;
+    position: relative;
+    z-index: 20;
+}
+
+td.actionBtns button.dllog {
+    background: url(images/icon-view-log.png) left top no-repeat;
+    width: 24px; height: 24px;
+    box-shadow: none;
+}
+
+td.actionBtns button.dllog:hover {
+    background-position: right top;
+}
+
+td.actionBtns button.download {
+    background: url(images/icon-download.png) left top no-repeat;
+    width: 24px; height: 24px;
+    box-shadow: none;
+}
+
+td.actionBtns button.download:hover {
+    background-position: right top;
+}
+
+caption {
+    margin-top: 5px;
+}
+
+div.actionBtns {
+    margin-top: 10px;
+}
+
+form.deleteDialog span:after {
+    content: " will be permanently deleted.  Are you sure you want to do this?";
+}
+
+form.deleteProfileCollectionDialog span:after {
+    content: " will be permanently deleted. In order to delete this collection, we will need to first turn off profiling.  Are you sure you want to do this?";
+}
+
+.paginatorForm, .paginatorNav {
+    text-transform: lowercase;
+    color: #ccc;
+}
+
+.paginatorNav a {
+    text-decoration: none;
+    font-size: 80%;
+    color: inherit;
+}
+
+/** Index options table */
+
+table.indexOptionsTable {
+    width: 325px;
+}
+
+table.indexOptionsTable td, table.indexOptionsTable th {
+    border: none;
+    color: #222;
+    padding: 3px 5px;
+}
+
+table.indexOptionsTable td {
+    width: 100%;
+}
+
+table.indexOptionsTable th {
+    text-transform: none;
+    white-space: nowrap;
+}
+
+table.indexOptionsTable tr:hover {
+    xbackground-color: transparent;
+    background-color: transparent;
+}
+
+.tooltip {
+    display: none;
+}
+
+/** Button tooltips */
+button .tooltip {
+    position:relative;
+    top:2em; left:1em;
+    padding: 2px;
+    border: 1px solid #a6cbe1; /* lt blue */
+    background-color: #1b242c;
+    color: white;
+    font-size: 12px;
+    font-family: "Century Gothic", "Heiti TC", Questrial, sans-serif;
+}
+
+button:hover .tooltip {
+    display:inline;
+}
+
+/** HTML overlays **/
+div .overlay {
+    color: #ccc;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0e1b23), to(#0D141C));
+    background-image: -webkit-linear-gradient(top, #0e1b23, #0D141C); /*safari 5.1+*/
+    background-image: -moz-linear-gradient(top, #0e1b23, #0D141C);/*firefox3.6+*/
+    background-image: -ms-linear-gradient(top, #0e1b23, #0D141C);/*ie 10*/
+    background-image: -o-linear-gradient(top, #0e1b23, #0D141C);/*opera*/
+    border: 1px solid #ccc;
+    padding: 40px;
+    width: 600px;
+    max-height: 400px;
+    overflow: scroll;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+}
+
+div .overlay h1 {
+    font-size: 22px;
+}
+
+div .overlay .tableHeader {
+    margin: 15px 0 5px 0 !important;
+    padding-top: 5px;
+}
+
+div .overlay table {
+    border-collapse: collapse;
+    color: inherit;
+}
+
+div .overlay table td.label {
+    color: #a6cbe1; /* powder blue */
+}
+
+div .overlay .audit {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 90%;
+    float: right;
+}
+
+/*****************************************************************************
+ * div#body #sidebar
+ *****************************************************************************/
+.generalHelp {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.generalHelp, .specificHelp {
+    padding: 5px 20px 15px 25px;
+    width: 267px;
+}
+
+.specificHelp {
+    border-color: #DAA8F5; /* purple */
+    z-index: 100;
+    position: absolute;
+    background-color: #385a6d;
+    padding-top:20px;
+    margin: 15px 0;
+}
+
+#MongoDBInc .specificHelp {
+    background-color: #dee0e3;
+}
+
+.specificHelp h1 {
+    line-height:24px;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+
+.specificHelp .helpIcon {
+    background: url(images/large-question-mark-icon.png) top left no-repeat;
+    display: inline-block;
+    margin-right:7px;
+    width: 24px;
+    height: 24px;
+    float:left;
+}
+
+/*****************************************************************************
+ * Account - login, signup, reset-password, etc.
+ *****************************************************************************/
+
+.account {
+    margin: 65px auto 0 auto;
+    padding: 15px;
+    width: 400px;
+    text-align: left;
+    background-color: #3f4852;
+    font-family: "Roboto", sans-serif !important;
+    color: inherit;
+}
+
+.account .blueButton { float:left; }
+
+.account .title  {
+    display: block;
+    margin: 3px;
+    margin-bottom:10px;
+    padding: 8px 8px;
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+}
+
+.account .content .message {
+    margin-left: 20px; margin-right: 20px;
+}
+
+.account .content fieldset {
+    width: 85%;
+}
+
+.account .content fieldset.btns {
+    margin-top: 25px;
+    vertical-align: middle;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.account a:link, .account a:visited {
+    color:#79ccf5 !important; }
+    
+    
+    
+/*****************************************************************************
+ * Server Summary
+ *****************************************************************************/
+
+#secondaryDataWarning {
+    margin-top: -35px;
+    color: white;
+    border: 1px solid #E2DAA7; /* pale yellow */
+    position: absolute;
+    z-index: 200;
+    float: left;
+    width: 67px;
+    height: 16px;
+    padding: 3px 8px 3px 25px;
+    background-image: url(images/icon_warning.gif);
+    background-color: #1b242c;
+    background-repeat: no-repeat;
+    background-position: 5px 3px;
+    overflow: hidden;
+}
+
+#secondaryDataWarning.nofloat {
+    float: none;
+    margin-left: 20px;
+}
+
+#secondaryDataWarning:hover {
+    background-color: #515c65;
+}
+
+#secondaryDataWarning .secondaryDataTitle {
+    white-space: nowrap;
+}
+
+#secondaryDataWarning .secondaryDataDetails {
+    width: 335px;
+    margin-top: 10px;
+}
+
+.healthStatus0 { color: #e00; text-decoration: underline } /* red */
+.healthStatus1 { color: #0e0; text-decoration: underline } /* green */
+.healthStatus2 { color: #ee0; text-decoration: underline } /* yellow */
+
+#MongoDBInc .healthStatus0 { color: inherit; }
+#MongoDBInc .healthStatus1 { color: inherit; }
+#MongoDBInc .healthStatus2 { color: inherit; }
+
+.loadingDatabaseComplete {
+    display: none;
+}
+
+.loadingDatabase .loadingWheel,
+.loadingDatabase .loadingWheel {
+    width: 18px;
+    height: 18px;
+    float: left;
+    padding-right: 5px;
+}
+
+.buildingCluster {
+    padding-left: 10px;
+    font-size: 12px;
+    color: #ee0; /* yellow */
+}
+
+#MongoDBInc .buildingCluster {
+    color: #fead00;
+}
+
+.buildingCluster .activity {
+    font-size: 12px;
+    color: #A6CBE1;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#MongoDBInc .buildingCluster .activity {
+    color: #271B15;
+}
+
+.buildingClusterComplete {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: #0e0;
+}
+
+.buildingClusterComplete a {
+    text-decoration: none;
+}
+
+.cluster-summary, .connection-summary {
+    background-color: #28313a;
+    margin: 0px auto 25px auto;
+    padding: 10px 15px 15px 15px;
+    width: 95%;
+    text-align: left;
+}
+
+#MongoDBInc .cluster-summary, #MongoDBInc .connection-summary {
+    background-color: #ebebed;
+}
+
+.cluster-summary .subtitleContainer {
+    height: 16px;
+    margin-top: 4px;
+    padding-left: 10px;
+    display: block;
+}
+
+.cluster-summary .subtitle {
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.connection-summary span.subtitle {
+    margin-top: 4px;
+    display: inline;
+    font-size: 12px;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.cluster-summary .server-status {
+    margin-top: 4px;
+    float: right;
+    display: inline;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.cluster-summary .dbtable tbody tr.odd,
+.cluster-summary .dbtable tbody tr.odd.nolink:hover,
+.connection-summary .dbtable tbody tr.odd,
+.connection-summary .dbtable tbody tr.odd.nolink:hover {
+    background-color: #515c65;
+}
+
+.cluster-summary .dbtable tbody tr.even,
+.cluster-summary .dbtable tbody tr.even.nolink:hover,
+.connection-summary .dbtable tbody tr.even,
+.connection-summary .dbtable tbody tr.even.nolink:hover {
+    background-color: #3f4852;
+}
+
+#MongoDBInc .cluster-summary .dbtable tbody tr {
+    background-color: #fff;
+}
+
+.cluster-summary .dbtable tbody tr:hover,
+.connection-summary .dbtable tbody tr:hover {
+    background-color: #47525B;
+}
+
+.cluster-summary h1, .connection-summary h1 {
+    display: inline;
+}
+
+.cluster-summary div.title,
+.connection-summary div.title  {
+    display: block;
+    margin: 0px 3px 10px 3px;
+    padding: 8px 8px;
+    font-size: 18px;
+    color: white;
+    border-bottom: none;
+    background-color: transparent;
+}
+
+#MongoDBInc .cluster-summary div.title,
+#MongoDBInc .connection-summary div.title  {
+    color: inherit;
+}
+
+.cluster-summary div.link {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.cluster-summary.link {
+    position: relative;
+
+    background-image: linear-gradient(top, #353E47 20px, #28313a 120px);
+    background-image: -o-linear-gradient(top, #353E47 20px, #28313a 120px);
+    background-image: -moz-linear-gradient(top, #353E47 20px, #28313a 120px);
+    background-image: -webkit-linear-gradient(top, #353E47 20px, #28313a 120px);
+    background-image: -ms-linear-gradient(top, #353E47 20px, #28313a 120px);
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(20px, #353E47),
+        color-stop(90px, #28313a)
+    );
+    background-repeat: no-repeat;
+    background-position: 0 -200px;
+
+    -webkit-box-shadow: 0px 0px 0px rgba(31,37,45,1), 0px 0px 0px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 0px 0px rgba(31,37,45,1), 0px 0px 0px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 0px rgba(31,37,45,1), 0px 0px 0px rgba(0,0,0,.5);
+
+    -webkit-transition: all .1s ease;
+    -moz-transition: all .1s ease;
+    -ms-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease;
+}
+
+#MongoDBInc .cluster-summary.link {
+
+    background-image: linear-gradient(top, #DEE0E3 20px, #ebebed 120px);
+    background-image: -o-linear-gradient(top, #DEE0E3 20px, #ebebed 120px);
+    background-image: -moz-linear-gradient(top, #DEE0E3 20px, #ebebed 120px);
+    background-image: -webkit-linear-gradient(top, #DEE0E3 20px, #ebebed 120px);
+    background-image: -ms-linear-gradient(top, #DEE0E3 20px, #ebebed 120px);
+
+
+}
+
+.cluster-summary.link:hover {
+    position: relative;
+    background-position: 0 0;
+}
+
+.cluster-summary.link:active {
+    position: relative;
+    top: -2px;
+    background-position: 0 -25px;
+    -webkit-box-shadow: 0px 2px 0px rgba(31,37,45,1), 0px 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0px 2px 0px rgba(31,37,45,1), 0px 3px 6px rgba(0,0,0,.5);
+    box-shadow: 0px 2px 0px rgba(31,37,45,1), 0px 3px 6px rgba(0,0,0,.5);
+}
+
+.connection-summary div.title:hover {
+    background-color: #353E47;
+}
+
+.connection-summary .subtitle {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+.cluster-summary .dbtable,
+.connection-summary .dbtable {
+    padding-top: 0px;
+}
+
+.cluster-summary .label,
+.connection-summary .label {
+    display: inline;
+    color: #A6CBE1;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+.cluster-summary .content .message,
+.connection-summary .content .message {
+    margin-left: 20px; margin-right: 20px;
+}
+
+.cluster-summary .content fieldset,
+.connection-summary .content fieldset {
+    width: 85%;
+}
+
+.cluster-summary .content fieldset.btns,
+.connection-summary .content fieldset.btns {
+    margin-top: 25px;
+    vertical-align: middle;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.connection-summary .down {
+    color: #e00;
+}
+
+.connection-summary div.down {
+    font-style: italic;
+    padding-left: 10px;
+}
+
+/*****************************************************************************
+ * Cluster status
+ *****************************************************************************/
+
+.healthStatusDisplay {
+    text-decoration: none;
+}
+
+span.statusLabel {
+    color: #81B6D5;
+}
+
+#MongoDBInc span.statusLabel {
+    color: inherit;
+}
+
+.repLag-sec, .repLag-ms {
+    color: #0e0; /* green */
+}
+
+#MongoDBInc .repLag-sec, #MongoDBInc .repLag-ms {
+    color: inherit;
+}
+
+.repLag-min, .repLag-unknown {
+    color: #ee0;
+}
+
+#MongoDBInc .repLag-min, #MongoDBInc .repLag-unknown {
+    color: inherit;
+}
+
+table.serverStatusTable .optime-unrecoverable,
+.repLag-hr, .repLag-day,
+.repLag-unrecoverable {
+    color: #e00; /* red */
+}
+
+
+#MongoDBInc table.serverStatusTable .optime-unrecoverable,
+#MongoDBInc .repLag-hr, #MongoDBInc .repLag-day,
+#MongoDBInc .repLag-unrecoverable {
+    color: inherit;
+}
+
+/*****************************************************************************
+ * Server logs
+ *****************************************************************************/
+table.serverLogsTable a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+#tabs #logs .formFields {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#tabs #logs .formFields .fieldLabel {
+    margin-right: 5px;
+    text-align: right;
+    color: white;
+    font-size: 120%;
+}
+
+#tabs #logs .formFields .fieldInput {
+    font-size: 110%;
+}
+
+#tabs #logs #logsLoading {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*****************************************************************************
+ * User edit form
+ *****************************************************************************/
+form.stdForm {
+    width: 570px;
+}
+
+form.stdForm label {
+    float: left;
+    width: 180px;
+    text-align: right;
+    clear: left;
+    margin-right: 10px;
+}
+
+form.stdForm label.error {
+    float: left;
+    width: 250px;
+    text-align: left;
+    margin-left: 190px; /* width plus margin-right */
+}
+
+form.stdForm label:after {
+    content: ":";
+}
+
+form.stdForm label.error:after {
+    content: "";
+}
+
+form.stdForm input[type=text],
+form.stdForm input[type=password],
+form.stdForm textarea {
+    width: 250px;
+}
+
+/*****************************************************************************
+ * Credit cards
+ *****************************************************************************/
+ul.cards{margin:0 0 10px 0!important;height:25px;}
+ul.cards li{list-style-type:none;float:left;margin:0 1px 0 0!important;}
+ul.cards li.text{position:relative;top:5px;font-size:11px;color:#999;}
+ul.cards .card{float:left;width:39px;height:25px;text-indent:-9999px;background-position:0 0;background-repeat:no-repeat;}
+ul.cards .card.disabled{background-position:0 -25px;opacity:.3;-moz-opacity:.3;filter:alpha(opacity=30);}
+ul.cards .card.visa{background-image:url(images/card-visa.gif);}
+ul.cards .card.master{background-image:url(images/card-mastercard.gif);}
+ul.cards .card.american_express{background-image:url(images/card-amex.gif);}
+ul.cards .card.discover{background-image:url(images/card-discover.gif);}
+ul.cards .card.jcb{background-image:url(images/card-jcb.gif);}
+ul.cards .card.diners_club{background-image:url(images/card-diners.gif);}
+
+/*****************************************************************************
+ * Pricing
+ * (vertically aligned bullet points using technique described here:
+ *  http://www.jakpsatweb.cz/css/css-vertical-center-solution.html)
+ *
+ *****************************************************************************/
+.pricing .divider {
+    background: url(images/horizontal-line.png) repeat-x;
+    height: 1px;
+    margin: 10px 0;
+}
+
+.pricing .levelHd {
+    width: 400px;
+    float: left;
+    color: #a6cbe1;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.pricing .levelBd {
+    margin-top: 6px;
+    width: 400px;
+    float: left;
+}
+
+.pricing .levelBdTable {
+    
+    display: table;
+    height: 100px;
+    overflow: hidden;
+}
+
+.pricing .levelBdTableCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.pricing .planHd {
+    margin-left: 25px;
+    width: 90px;
+    float: left;
+    color: #a6cbe1;
+    text-align: center;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.pricing .planBd {
+    margin-left: 25px;
+    width: 90px;
+    float: left;
+}
+
+.pricing .planBox {
+    margin-top: 6px;
+    width: 90x;
+    height: 100px;
+    border: 1px solid #a6cbe1;
+    text-align: center;
+}
+
+.pricing .planBox div.price {
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.pricing .planBox span.price {
+    font-size: 16px;
+}
+
+.pricing .planBox div.maxSize {
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.pricing .planBox span.maxSize {
+    font-size: 14px;
+}
+
+.pricing .planBox div.overagePrice {
+    font-size: 12px;
+}
+
+/*****************************************************************************
+ * FAQ
+ *****************************************************************************/
+.faq {
+}
+
+.faq .question:before {
+    content: "Q. ";
+    xfont-size: 16px;
+}
+
+.faq .question {
+    color: #a6cbe1; /* powder blue */
+    font-size: 100%;
+}
+
+.faq .answer {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 19px;
+}
+
+.faq h3 {
+    font-size: 100%;
+    border: 0;
+    margin: 0 0;
+    color: #ccc;
+    text-decoration: underline;
+}
+
+/*****************************************************************************
+ * jQuery UI - General
+ *****************************************************************************/
+.ui-widget,
+.ui-widget input, .ui-widget select {
+    font-size: 100%;
+    font-family: inherit;
+}
+
+.ui-widget-content {
+    color: inherit;
+}
+
+.ui-widget-content .ui-menu-item {
+    color: #222;
+}
+
+.ui-tabs.ui-widget-content p {
+    font-size:14px;
+    line-height:22px;
+}
+
+.ui-widget-content a {
+    color: inherit;
+}
+
+button.ui-button {
+    border: 0;
+    background: none;
+}
+
+/*****************************************************************************
+ * jQuery UI Dialog formatting adjustments
+ *****************************************************************************/
+.ui-dialog {
+    font: inherit !important;
+    color: #555;
+}
+
+.ui-dialog tr {
+    color: #c9cccd;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    color: #3a9ecd; /* md. powder blue */
+    font-size: 140%;
+    font-weight: normal;
+    text-align: left;
+    margin: 3px;
+    padding: 10px 8px;
+}
+
+.ui-dialog #ui-dialog-title-jsonErrorDialog {
+    color: red;
+}
+
+.ui-dialog .ui-dialog-content {
+    color: inherit !important;
+    text-align: left;
+}
+
+.ui-dialog h2 {
+    color: inherit !important;
+    font-size: 16px;
+    margin: 20px 0 5px 0 !important;
+    padding-top: 5px;
+    border-top: 1px solid #ccc;
+    text-transform: capitalize;
+}
+
+.ui-dialog h2.first {
+    margin-top: 0px;
+}
+
+.ui-dialog h2:after {
+    content: ":"
+}
+
+.ui-dialog .h2Section {
+    padding: 0px 20px;
+}
+
+.ui-dialog .h2Section label {
+    margin-top: 5px;
+    display: block;
+}
+
+.ui-dialog .ui-dialog-content p.intro {
+    font-size: 108%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ui-dialog .ui-dialog-content p.body {
+    font-size: 108%;
+}
+
+.ui-dialog fieldset {
+    width: 90%;
+    color: inherit;
+}
+
+.ui-dialog fieldset label {
+    color: inherit;
+}
+
+.ui-dialog .ui-button {
+    border: 1px solid #d3d3d3;
+}
+
+.ui-dialog .ui-button:last-child,
+.ui-dialog .noSubmitOnEnter {
+    background: none;
+}
+
+.ui-dialog .ui-icon-alert {
+    float: left;
+    margin: 0 7px 35px 0;
+}
+
+/*****************************************************************************
+ * jQuery UI Tabs
+ *****************************************************************************/
+#tabs.ui-tabs {padding:0;}
+#tabs.ui-tabs > .ui-tabs-nav {
+    margin:0; padding:0; border:none; display:block;
+    width:100%; border-radius:5px;
+    background:#595f65; /* Old browsers */
+    background:-moz-linear-gradient(top, #595f65 0%, #282f36 63%, #3d464d 100%); /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#595f65), color-stop(63%,#282f36), color-stop(100%,#3d464d)); /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top, #595f65 0%, #282f36 63%, #3d464d 100%); /* Chrome10+,Safari5.1+ */
+    background:     -o-linear-gradient(top, #595f65 0%, #282f36 63%, #3d464d 100%); /* Opera 11.10+ */
+    background:    -ms-linear-gradient(top, #595f65 0%, #282f36 63%, #3d464d 100%); /* IE10+ */
+    background:  linear-gradient(to bottom, #595f65 0%, #282f36 63%, #3d464d 100%); /* W3C */
+    moz-box-shadow:0px 2px 4px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.2);
+    webkit-box-shadow:0px 2px 4px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.2);
+    box-shadow:0px 2px 4px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#595f65', endColorstr='#3d464d',GradientType=0); /* IE6-9 */
+}
+#MongoDBInc #tabs.ui-tabs > .ui-tabs-nav {
+    background: #ebebed;
+}
+#tabs .ui-tabs:after {clear:both; display:table; content:"";}
+#tabs.ui-tabs > .ui-tabs-nav li {
+    padding:0; margin:0; float:left; background: none; border:none;
+    border-radius:0;display:block; top:0;
+}
+#tabs.ui-tabs > .ui-tabs-nav li:hover {background: none; margin:0; padding:0; display:block;}
+#tabs.ui-tabs > .ui-tabs-nav li a {
+    display:block; float:left; text-align:center; width:93px; height:34px; color:#C9CCCD !important; font:15px/41px "Museo Sans", sans-serif; padding:0 20px 6px 20px; text-decoration:none !important; 
+    background:url(https://mongolab.com/company/img/subnav_border.png) right center no-repeat;
+}
+
+#MongoDBInc #tabs.ui-tabs > .ui-tabs-nav li a {
+    background:url(https://mongolab.com/company/img/subnav_border.png) right center no-repeat;
+}
+
+#tabs.ui-tabs > .ui-tabs-nav li:first-child a {border-radius:5px 0 0 5px; margin-left:0 !important;}
+
+#tabs.ui-tabs > .ui-tabs-nav li a:hover {
+    background:#7b8083; /* Old browsers */
+    background:-moz-linear-gradient(top, #7b8083 0%, #42484e 65%, #646b71 100%); /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#7b8083), color-stop(65%,#42484e), color-stop(100%,#646b71)); /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top, #7b8083 0%, #42484e 65%, #646b71 100%); /* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(top, #7b8083 0%, #42484e 65%, #646b71 100%); /* Opera 11.10+ */
+    background:-ms-linear-gradient(top, #7b8083 0%, #42484e 65%, #646b71 100%); /* IE10+ */
+    background:linear-gradient(to bottom, #7b8083 0%, #42484e 65%, #646b71 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7b8083', endColorstr='#646b71',GradientType=0); /* IE6-9 */
+    color:#ffffff;
+}
+#MongoDBInc #tabs.ui-tabs > .ui-tabs-nav li a:hover {
+    background: #f5f6f7;
+}
+#tabs.ui-tabs > .ui-tabs-nav li.ui-tabs-selected a, 
+#tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover {
+    position:relative; margin-left:-1px;
+    background:#308ab4; /* Old browsers */
+    background:-moz-linear-gradient(top, #257ca9 0%, #3893bc 100%); /* FF3.6+ */
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#257ca9), color-stop(100%,#3893bc)); /* Chrome,Safari4+ */
+    background:-webkit-linear-gradient(top,  #257ca9 0%,#3893bc 100%); /* Chrome10+,Safari5.1+ */
+    background:-o-linear-gradient(top, #257ca9 0%, #3893bc 100%); /* Opera 11.10+ */
+    background:-ms-linear-gradient(top, #257ca9 0%, #3893bc 100%); /* IE10+ */
+    background:linear-gradient(to bottom, #257ca9 0%, #3893bc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#257ca9', endColorstr='#3893bc',GradientType=0); /* IE6-9 */
+    color:#ffffff !important;
+    moz-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.3);
+    webkit-box-shadow:inset 0px 2px 2px rgba(0,0,0,0.3);
+    box-shadow:inset 0px 2px 2px rgba(0,0,0,0.3);
+}
+#MongoDBInc #tabs.ui-tabs > .ui-tabs-nav li.ui-tabs-selected a, 
+#MongoDBInc #tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover {
+    background: #5daa46;
+}
+
+#tabs.ui-tabs > .ui-tabs-nav li.ui-tabs-selected a:after {
+    content:""; display:block;width:0; height:0; 
+    position:absolute; left:50%; margin-left:-7px;
+    border-left:7px solid transparent; border-right:7px solid transparent; 
+    border-top:7px solid #3995bd; 
+    margin-top: -1px;
+}
+
+#MongoDBInc #tabs.ui-tabs > .ui-tabs-nav li.ui-tabs-selected a:after {
+    border-top:7px solid #5daa46;
+}
+
+/*****************************************************************************
+ * jQuery UI Tabs [more...]
+ *****************************************************************************/
+
+#subtabs.ui-tabs .ui-widget-header {
+    background:transparent;
+    border: 0px;
+}
+
+#subtabs.ui-tabs .ui-tabs-nav li.ui-state-default,
+#subtabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover,
+#subtabs.ui-tabs .ui-tabs-nav li.ui-state-hover,
+#subtabs.ui-tabs .ui-tabs-nav li.ui-state-active {
+    background:transparent;
+    border: 0px;
+}
+
+#subtabs.ui-tabs .ui-tabs-nav a {
+    text-decoration: underline !important;
+}
+
+#subtabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 1em 4px;
+}
+
+#subtabs.ui-tabs .ui-tabs-panel {
+    padding: 0px 0px;
+}
+
+.ui-tabs {
+    background: transparent;
+    border: 0px;
+}
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected,
+.ui-tabs .ui-tabs-nav li.ui-state-default {float: right; }
+.ui-tabs .ui-tabs-nav li a { float: right; }
+
+/*****************************************************************************
+ * Inline help
+ *****************************************************************************/
+
+.inlineHelp {
+    border: 1px dotted;
+    border-color: #a6cbe1; /* lt blue */
+    padding: 5px 10px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.inlineHelp p {
+    font-size: 12px;
+    margin: .5em 0;
+}
+
+.inlineHelp pre {
+    font-size: 11px;
+}
+
+/*****************************************************************************
+ * Heroku
+ *****************************************************************************/
+#herokuAddOnsScreenshot {
+    background: url(images/heroku-add-ons.png) no-repeat;
+    width: 338px; height: 267px;
+    float: right;
+    margin: 0px 10px;
+}
+
+/*****************************************************************************
+ * Dex
+ *****************************************************************************/
+
+#queryReportsSummary + .h2 {
+    margin-top: 7px;
+}
+
+#queryReportsSummary .section.one {
+    float:left;
+}
+
+#queryReportsSummary .section.two {
+    float:right;
+    margin-right: 7px;
+}
+
+#queryReportsSummary .section.footnote {
+    margin-top:15px;
+}
+
+#queryReportsSummary .footnote span {
+    font-style: italic;
+    font-size: 11px;
+}
+
+#queryReportsSummary .label {
+    color: #a6cbe1; /* powder blue */
+    text-align: left;
+    width: 200px;
+}
+#MongoDBInc #queryReportsSummary .label {
+    color: inherit;
+}
+
+#queryReportsSummary .datetime .label {
+    color: inherit;
+    width: 40px;
+    float: left;
+}
+
+#queryReportsSummary .datetime .value {
+    float: left;
+}
+
+#queryReportsSummary .value {
+    float: left;
+}
+
+.queryReport .label {
+    color: #a6cbe1; /* powder blue */
+}
+#MongoDBInc .queryReport .label {
+    color: inherit;
+}
+
+.queryReport {
+    padding-bottom:5px;
+    margin-bottom:20px;
+    background-color: #28313a;
+}
+
+.queryReport .section { float:left; padding-left: 18px; padding-top: 14px; padding-right:18px;}
+.queryReport .row.top .section { min-height:132px;}
+.queryReport .row.bottom .section { min-height:50px;}
+.queryReport .sectionDivider { float:left; background-color:#888;width:1px; min-height: 136px; margin-top:14px; margin-bottom:10px;}
+.queryReport .rowDivider { float:left; margin-top: 1px; margin-left:15px; background-color:#888; height:1px; min-width: 715px }
+.queryReport .section.one { width:580px; }
+.queryReport .section.two { width:90px; }
+.queryReport .section.three { float:left; width:500px; }
+.queryReport .section.four { float:left; width: 160px; }
+
+.queryReport .label { margin-bottom:10px; text-transform:lowercase;}
+.queryReport .namespace { margin-top: -1px; margin-bottom:10px; float:right; }
+.queryReport .value { margin-bottom:10px; color:#ACACAC;}
+.queryReport .value.json { font-family:"Droid Sans Mono",monospace; font-size:12px;}
+.queryReport .major.label { font-size:17px; }
+.queryReport .major.label .tip { font-size:11px; color:#ACACAC; }
+.queryReport .major.value { margin-left:15px; }
+.queryReport .stats .value { display:block; margin-bottom:10px; }
+.queryReport .stats .stat:last-child .value { margin-bottom: 0px; }
+.queryReport a.button { margin-top:10px; }
+
+/*****************************************************************************
+ * Backups
+ *****************************************************************************/
+.backupTargetProvider div,
+.backupTarget div {
+    clear: both;
+    height: 27px;
+    vertical-align: middle;
+}
+.backupTargetProvider label,
+.backupTarget label {
+    width: 150px;
+    float: left;
+}
+
+.backupTarget label.error {
+    margin-left: 150px;
+    margin-top: -2px;
+}
+
+.backupTarget input[type="text"] {
+    width: 300px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height:19px;
+    float: left;
+}
+
+/*****************************************************************************
+ * Mongostat 
+ *****************************************************************************/
+#mongostatControls {
+    height: 58px;
+    border-bottom: 1px solid #3F4A51;
+}
+#mongostatContent {
+}
+#serverSelector {
+    margin-left: 10px;
+}
+#consoleOutput {
+    min-width: 970px;
+    overflow-x: scroll;
+    margin: auto auto;
+}
+#consoleOutput table {
+    background-color: transparent;
+    color: white;
+    margin-top: 20px;
+    font-family: "Droid Sans Mono", monospace;
+}
+#consoleOutput table thead th {
+    text-transform: none;
+    padding: 3px 5px;
+    white-space: nowrap;
+    font-size: 10px;
+    text-align: right;
+}
+#consoleOutput table tbody td {
+    padding: 0 5px 0 0;
+    white-space: nowrap;
+    font-size: 10px;
+    text-align: right;
+}
+#consoleOutput table tr {
+    height: 1em;
+}
+.rickshaw_graph, .rickshaw_legend {
+    background-color: transparent;
+}
+.rickshaw_graph .detail .x_label { display: none }
+.rickshaw_graph .detail .item { line-height: 1.4; padding: 0.5em }
+.detail_swatch { float: right; display: inline-block; width: 10px; height: 10px; margin: 0 4px 0 0 }
+.rickshaw_graph .detail .date { color: #a0a0a0; }
+.rickshaw_graph .tick line {
+    stroke: #3f4a51;
+}
+.rickshaw_graph .y_ticks text,
+.rickshaw_graph .x_ticks_d3 text
+{
+    fill: white;
+    opacity: 0.6;
+}
+.rickshaw_legend .line {
+    float: left;
+    clear: none;
+    min-width: 0px;
+    margin-left: 0px;
+    padding-right: 20px;
+}
+#startButton {
+    display: block;
+    margin-left: 10px;
+}
+#graphs {
+    margin: auto auto;
+    height: 550px;
+}
+#graphs h2 {
+    text-align: center;
+    font-size: 16px;
+}
+#graphs .graphSection {
+    width: 300px;
+    height: 275px;
+    float: left;
+    margin: 0px 10px;
+}
+#consoleOutput th.oddGroup {
+    background-color: #3f4852;
+}
+#consoleOutput th.evenGroup {
+    background-color: #353E47;
+    color: #ddd;
+}
+#consoleOutput th {
+    color: white;
+}
+

@@ -1,0 +1,3375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0118)https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>MongoLab: MongoDB-as-a-Service</title><meta content="MongoLab is the market-leading MongoDB database-as-a-service platform that fully automates the operational aspects of running MongoDB. MongoLab runs on all the major cloud providers, including Amazon, Joyent, Rackspace and Windows Azure." name="Description">
+    
+    
+
+
+<!-- General -->
+<meta content="cloud database, cloud database hosting, mongo, mongodb, hosted mongo, hosted mongodb, mongodb hosting, host mongodb, host mongo, mongo hosting, heroku mongo, heroku mongodb, mongodb gui" name="Keywords">
+
+<!-- MongoLab Base -->
+
+<meta name="viewport" content="width=1044">
+
+<!-- keywords -->
+<meta content="cloud database, cloud database hosting, mongo, mongodb, hosted mongo, hosted mongodb, mongodb hosting, host mongodb, host mongo, mongo hosting, heroku mongo, heroku mongodb, mongodb gui" name="Keywords">
+
+<!-- favicon -->
+<link href="https://mongolab.com/base/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+<!-- fonts -->
+<link type="text/css" rel="stylesheet" href="./MongoLab  MongoDB-as-a-Service_files/css">
+<link rel="stylesheet" type="text/css" href="./MongoLab  MongoDB-as-a-Service_files/MyFontsWebfontsKit.css">
+
+<!-- jQuery Library and jQuery UI Tools -->
+<!-- (downloaded from: http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js) -->
+<script type="text/javascript" src="./MongoLab  MongoDB-as-a-Service_files/jquery.tools.min-1.2.7.js"></script>
+
+<!-- YUI reset css -->
+<link rel="stylesheet" type="text/css" href="./MongoLab  MongoDB-as-a-Service_files/yui-2.9.0-reset-fonts-grids.css">
+
+<!-- custom CSS -->
+<link rel="stylesheet" type="text/css" href="./MongoLab  MongoDB-as-a-Service_files/mongolab-base.min.css">
+
+<!-- custom Javascript -->
+<script type="text/javascript" encoding="utf-8">
+
+  function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+  return "";
+  else
+  return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  function hideAccountLinks() {
+  $("#headerAccountLink").hide();
+  $("#headerAccountLinks").hide();
+  }
+
+  function showAccountLinks() {
+  $("#headerAccountLink").show();
+  $("#headerAccountLinks").show();
+  }
+
+  function hideSignupRelatedLinks() {
+  $("#headerLoginLink").hide();
+  $("#headerSignupLink").hide();
+  $("#preFooterBar .links").hide();
+  }
+
+  function showHomeLink() {
+  $("#headerHomeLink").show();
+  }
+
+  function showSignupRelatedLinks() {
+  $("#headerLoginLink").show();
+  $("#headerSignupLink").show();
+  $("#headerWelcomeLink").hide();
+  $("#headerLogoutLink").hide();
+  }
+
+  function showLogoutLink() {
+  hideSignupRelatedLinks();
+  $("#headerWelcomeLink").show();
+  $("#headerLogoutLink").show();
+  }
+
+  function hideLoginLink() {
+  $("#headerLoginLink").hide();
+  }
+
+  function hideLogoutLink() {
+  $("#headerWelcomeLink").hide();
+  $("#headerLogoutLink").hide();
+  }
+
+  function hideSignupLink() {
+  $("#headerSignupLink").hide();
+  }
+
+  function hideMarketingContent() {
+  $("li.marketingLinks").hide();  
+  $("a.marketingLink").hide();  
+  $("div.marketingContent").hide();  
+  }
+
+  $(document).ready(function() {
+  // have all external links  go to new tab
+  $("a[href^='http:']").attr("target", "_blank");
+  $("a[href^='https:']").attr("target", "_blank");
+  $("a[href^='http://mongolab.com']").attr("target", "_self");
+  $("a[href^='https://mongolab.com']").attr("target", "_self");
+  $("a[href^='http://mongodb-inc.mongolab.com']").attr("target", "_self");
+  $("a[href^='https://mongodb-inc.mongolab.com']").attr("target", "_self");
+
+  $("#header .links").show();
+  })
+</script>
+
+
+
+<!-- OLABS  -->
+<script src="./MongoLab  MongoDB-as-a-Service_files/olabs-util.js" type="text/javascript" encoding="utf-8"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/dynamic-portal.js" type="text/javascript" encoding="utf-8"></script>
+
+<!-- JSON -->
+<script src="./MongoLab  MongoDB-as-a-Service_files/json2.js" type="text/javascript" encoding="utf-8"></script>
+
+<!-- jQuery UI -->
+<link href="./MongoLab  MongoDB-as-a-Service_files/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css">
+<script src="./MongoLab  MongoDB-as-a-Service_files/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+
+<!-- jQuery plugins -->
+<script src="./MongoLab  MongoDB-as-a-Service_files/jquery.validate.min.js" type="text/javascript"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/jquery.safeEnter.min.js" type="text/javascript"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/jquery.curvycorners.packed.js" type="text/javascript"></script>
+
+<!-- Other Javascript packages -->
+<script src="./MongoLab  MongoDB-as-a-Service_files/codemirror-compressed.js"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/emacs.js"></script><style type="text/css"></style><style type="text/css"></style>
+<script src="./MongoLab  MongoDB-as-a-Service_files/spin.min.js" type="text/javascript" encoding="utf-8"></script><style type="text/css"></style>
+
+<!-- Google web fonts -->
+<link type="text/css" rel="stylesheet" href="./MongoLab  MongoDB-as-a-Service_files/css(1)">
+<link type="text/css" rel="stylesheet" href="./MongoLab  MongoDB-as-a-Service_files/css(2)">
+
+<!-- Graphing packages -->
+<link rel="stylesheet" href="https://mongolab.com/css/rickshaw/graph.css">
+<link rel="stylesheet" href="https://mongolab.com/css/rickshaw/detail.css">
+<link rel="stylesheet" href="https://mongolab.com/css/rickshaw/legend.css">
+<script src="./MongoLab  MongoDB-as-a-Service_files/d3.v3.min.js" type="text/javascript"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/rickshaw.min.js" type="text/javascript"></script>
+<script src="./MongoLab  MongoDB-as-a-Service_files/Rickshaw.Color.Palette.js" type="text/javascript"></script>
+
+
+
+<!-- Custom CSS -->
+<link href="./MongoLab  MongoDB-as-a-Service_files/main.css" rel="stylesheet" type="text/css">
+
+  <link href="./MongoLab  MongoDB-as-a-Service_files/small-header.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://mongolab.com/css/codemirror-3.css">
+
+<!-- Custom Javascript -->
+<script src="./MongoLab  MongoDB-as-a-Service_files/resource.js" type="text/javascript"></script>
+
+<!-- More custom Javascript -->
+<script type="text/javascript" encoding="utf-8">
+
+  // Make IE work
+  $.support.cors = true;
+
+  //
+  // When the DOM is fully loaded...
+  //
+  $(document).ready(function() {
+
+      //
+      // If title and/or meta description doesn't exist, add the default one(s)
+      //
+      jQuery.fn.exists = function(){return jQuery(this).length>0;}
+      if (!$("head meta[name='Description']").exists()) {
+        $("head").prepend("<meta content='MongoLab is the market-leading MongoDB database-as-a-service platform that fully automates the operational aspects of running MongoDB. MongoLab runs on all the major cloud providers, including Amazon, Joyent, Rackspace and Windows Azure.' name='Description' />");
+      }
+      if (!$("head title").exists()) {
+        $("head").prepend("<title>MongoLab: MongoDB-as-a-Service</title>");
+      };
+      //alert ($("head meta[name='Description']").attr("content"));
+
+      //
+      // Round corners
+      //
+      // NOTE: jquery.curvycorners does not work with input tags in IE, 
+      // so jQuery UI's ui-corner-all class was used
+      //
+      $("input[type='text'], input[type='password'], textarea").addClass("ui-corner-all");
+      $(".account").addClass("roundedCorners");
+      $("#modalLoadingIndicator").addClass("roundedCorners");
+      $("#keyMetadata").addClass("roundedCorners");
+      $("#secondaryDataWarning").addClass("roundedCorners");
+      $(".connectionInfo").addClass("roundedCorners");
+      $(".specificHelp").addClass("roundedCorners");
+      $(".inlineHelp").addClass("roundedCorners");
+      if(!$.browser.msie) {
+        $(".cluster-summary").addClass("roundedCorners");
+        $(".connection-summary").addClass("roundedCorners");
+      }
+
+      // 
+      // Apply the 'pointer' cursor to rows that don't have the 'nolink' class
+      //
+      $("tr[class='even']").addClass("link");
+      $("tr[class='odd']").addClass("link");
+
+      // 
+      // Remove the onclick attribute from rows that have the 'nolink' class
+      //
+      $("tr.nolink").removeAttr("onclick");
+
+      //
+      // Apply the 'help' cursor to anything with a mouseover specified
+      //
+      $("*[onmouseover]").addClass("help");
+
+      //
+      // Add 'title' to disabled butons
+      //
+      $("a.button.disabled").attr("title", "Disabled button. Please click to learn why.");
+
+      //
+      // Have all external links  go to new tab
+      //
+      $("a[href^='http:']").attr("target", "_blank");
+      
+      //
+      // Give focus to the first visible input tag
+      //
+      $("input:visible:first").focus();
+
+      //
+      // Listen for the 'Enter' key inside of all forms
+      //
+      $("form").not(".noSubmitOnEnter")
+	  .listenForEnter().bind("pressedEnter", function() {
+
+	  // if the form is valid
+	  if ($(this).valid()) {
+
+	      // click on all 'a' tags with class 'button' in the form
+	      $("form a.button").click();
+	      $("form a.blueButton").click();
+          $("form input.submit").click();
+
+              // click on the first button in any visible jQuery UI
+	      // Dialog button pane - the first button will always be the
+	      // submit button
+	      $(".ui-dialog-buttonpane:visible button:first").click();
+          }
+      });
+
+      //
+      // Listen for the 'Enter' key inside of all message dialogs
+      //
+      $(".ui-dialog.msgDialog").listenForEnter().bind("pressedEnter", function() {
+        $(".ui-dialog .ui-dialog-buttonpane:visible button:first").click();
+      });
+
+      //
+      // Allow tabbing to occur to buttons
+      //
+      $("a.button").attr("tabindex", "0");
+
+      //
+      // Unhighlight the submit buttons in the following two cases where
+      // pressing the 'Enter' key does not submit: 
+      // (1) delete confirmation, (2) HTTP POST
+      //
+      $("button:contains('Delete')").addClass("noSubmitOnEnter");
+      $("button:contains('Issue POST')").addClass("noSubmitOnEnter");
+
+      //      
+      // Define a general MongoDB custom validator
+      //      
+      $.validator.addMethod("mongoDBName", function( value, element ) {      
+	  var result = this.optional(element) || ( value.length < 80  && (/[$."]+/.test(value) == false) );
+	  return result;
+      }, "The name you choose must have fewer than 80 characters and cannot have double quotes.  In addition, $ and . are reserved characters in MongoDB.");
+  
+      //
+      // Define a database name custom validator
+      //
+      $.validator.addMethod("databaseName", function( value, element ) {
+	  var result = this.optional(element) || ( value.length < 64  &&
+                                             /^([a-z0-9_-])*$/.test(value) &&
+                                             [ 'admin', 'config', 'system' ].indexOf(value) < 0 );
+	  return result;
+      }, "The name you choose must be lowercase.  It also must have fewer than 64 characters and cannot have any spaces or special characters (hyphens and underscores are OK) in it. It cannot be 'admin', 'config', or 'system'");
+
+      //
+      // Define a collection name custom validator
+      //
+      $.validator.addMethod("collectionName", function( value, element ) {
+	  var result = this.optional(element) || ( value.length < 80 && (value.indexOf('system.') != 0) && (value.indexOf('objectlabs-system.') != 0) && /^([A-Za-z_])+([A-Za-z0-9_-]|\.)*$/.test(value) );
+	  return result;
+      }, "The name you choose must begin with a letter or underscore and must not begin with 'system.' or 'objectlabs-system.'.  It also must have fewer than 80 characters and cannot have any spaces or special characters (hyphens, underscores and periods are OK) in it.");
+
+      // 
+      // Override the 'password' validator
+      //
+      $.validator.addMethod("password", function( value, element ) {
+	  var result = this.optional(element) || 
+	      value.length >= 6 && /\d/.test(value) && /[a-z]/i.test(value);
+	  if (!result) {
+	      element.value = "";
+	  }
+	  return result;
+      }, "Your password must be at least 6 characters long and contain at least one number and one character.");
+
+      //
+      // Round to 3 decimal places
+      // 
+      $(".round").round();
+
+      //
+      // Add commas to numbers; also, columns that are numbers don't wrap
+      //
+      $(".number").commas();
+      $(".number").attr("nowrap", true);
+
+    // apply expand effect to connection info boxes
+    $(".connectionInfo").filter( function() {
+      var contentWidth = $("#connectionInfoContent").width();
+      var currentWidth = $(this).width();
+      return contentWidth > currentWidth;
+    } ).each( function() {
+      $(this).append('<div id="horizontalFade"></div>');
+      $(this).hover(
+        function() {
+          var contentWidth = $(this).find("span:first").width();
+          $(this).css("border-style", "solid");
+          $(this).stop().animate(
+             { "width": contentWidth },
+             { "complete" : function() { $(this).find("#horizontalFade").hide(); } }
+          );
+        },
+        function() {
+          $(this).css("border-style", "dotted");
+          $(this).after('<div class="connectionInfo" style="padding-top: 0; padding-bottom: 0; margin-top: 0; margin-bottom: 0; height: 0;"></div>');
+          var normalWidth = $(this).next().width();
+          var $fader = $(this).find("#horizontalFade");
+          var $this = $(this);
+          $(this).next().remove();
+          if( $(this).width != normalWidth ) {
+            $fader.show();
+            $this.stop().animate( { "width": normalWidth } );
+          }
+        }
+      );
+    });
+
+    // Reset #body height
+    resetBodyHeight();
+
+  }); // END $(document).ready()
+
+  //
+  // Constants
+  // 
+  var JSON_DISPLAY_SIZE_LIMIT = 300000;
+  var JSON_TRUNCATE_SIZE = 30000;
+
+  // 
+  // Initialize a jQuery UI Modal Message Dialog 
+  // (just an 'OK' button)
+  // 
+  function initMsgDialog(dialogId, width, height, okFunction) {
+    $(dialogId).dialog({
+      autoOpen: false,
+      modal: true,
+      buttons: {
+        OK: function() {
+          if(okFunction) {
+            okFunction();
+          } else {
+            $(this).dialog('close');
+          }
+        }
+      },
+      width: width,
+      height: height,
+      maxWidth: 1000
+    });
+
+    $(dialogId).parent().addClass("msgDialog");
+  }
+
+  // 
+  // Initialize a jQuery UI Modal Message Dialog 
+  // ('Yes'/'No')
+  // 
+  function initYesNoDialog(dialogId, width, height, noFunction, yesFunction) {
+    $(dialogId).dialog({
+      autoOpen: false,
+      modal: true,
+      buttons: {
+        Yes: function() {
+          if(yesFunction) {
+            yesFunction();
+          }
+          $(this).dialog('close');
+        },
+        No: function() {
+          if(noFunction) {
+            noFunction();
+          }
+          $(this).dialog('close');
+        }
+      },
+      width: width,
+      height: height,
+      maxWidth: 1000
+    });
+
+    $(dialogId).parent().addClass("yesNoDialog");
+  }
+
+  function showConfirmDialog(message, yesFunction, title) {
+      title = title || "Confirm";
+      var confirmDialog = $('<div title="'+ title + '"><p>' + message + '</p></div>');
+      confirmDialog.dialog({ autoOpen: false,
+                             modal: true,
+                             buttons: {
+                               Yes: function() {
+                                       if(yesFunction) {
+                                          yesFunction();
+                                       }
+                                      $(this).dialog('close');
+                                    },
+                                Cancel: function() {
+                                   $(this).dialog('close');
+                                }
+                             },
+                             maxWidth: 1000
+                          });
+
+      confirmDialog.parent().addClass("yesNoDialog");
+      confirmDialog.dialog('open');
+  }
+  //
+  // Initialize a jQuery UI Modal Form Dialog w/ a CodeMirror JSON editor
+  // 
+  function initEditorDialog(dialogId, editor, hiddenInputName, submitLabel) {
+      var buttons = {};
+
+      buttons[submitLabel] = function () {
+
+          // if form is valid, show the loading indicator
+          if ($(this).valid()) {
+            $("div.loadingIndicator").show();
+          }
+
+          // set the form's hidden input to be the contents of the editor's
+          // textbox
+          var json = $(dialogId).data(editor).getValue();
+          $("input[name='"+hiddenInputName+"']").val(json);
+
+          // validate the JSON; if valid, submit the form
+          try {
+            var jsonObj = JSON.parse(json);
+          }
+          catch (e) {
+
+            // if JSON is invalid, remove the loading indicator and display
+            // the JSON Validation Error modal dialog (defined in header.jsp)
+            $("div.loadingIndicator").hide();
+            openDialog("#jsonErrorDialog", null);
+            return;                              
+          }
+
+          $(this).submit();
+      };
+      
+      buttons["Cancel"] = function () {
+          $(".message.error").remove();
+	  $(dialogId).dialog('close');
+      };
+      
+      $(dialogId).dialog( {
+          autoOpen: false,
+          modal: true,
+          buttons: buttons
+      });
+  }
+
+  //
+  // Initialize a jQuery UI Modal Form Dialog
+  // with custom width & height
+  // 
+  function initDialog(dialogId, submitLabel, width, height) {
+
+      var buttons = {};
+
+      buttons[submitLabel] = function () {
+          if ($(this).valid()) {
+            $("div.loadingIndicator").show();
+          }
+          
+          $(this).submit();
+      };
+      
+      buttons["Cancel"] = function () {
+          $(".message.error").remove();
+	  $(dialogId).dialog('close');
+      };
+
+      $(dialogId).dialog( {
+          autoOpen: false,
+          modal: true,
+          buttons: buttons,
+          width: width,
+          height: height,
+          position: 'center'
+      });
+  }
+  function createPlainDialog(dialogId, width, height) {
+     $(dialogId).dialog( {
+         autoOpen: false,
+         modal: true,
+         width: width,
+         height: height,
+         position: 'center'
+    });
+  }
+  //
+  // Add loading indicator wheel to dialogs
+  // NOTE: this must be called AFTER the dialog is initialized
+  //
+  function addLoadingIndicator() {
+    $(".ui-dialog .ui-dialog-buttonpane:not(:has(div.loadingIndicator))").
+	  append("<div class='loadingIndicator'></div>");
+  }
+
+  function parseMongoUri(uri) {
+    if(!uri) {
+      return null;
+    }
+    var scheme = "mongodb://";
+    if(uri.indexOf(scheme) != 0) {
+      return null;
+    }
+
+    uri = uri.substring(scheme.length, uri.length);
+
+    var username_part = null;
+    var password_part = null;
+    var address_part = null;
+    var db_part = null;
+    var params_part = null;
+
+    var params_pos = uri.indexOf("?");
+    if(params_pos < 0) {
+      address_part = uri;
+    } else {
+      params_part = uri.substring(params_pos+1);
+      address_part = uri.substring(0,params_pos);
+    }
+
+    var auth_pos = address_part.indexOf("@");
+    if(auth_pos >= 0) {
+      var auth_parts = address_part.substring(0,auth_pos).split(":");
+      if(auth_parts.length != 2) {
+        return null;
+      }
+      username_part = auth_parts[0];
+      password_part = auth_parts[1];
+      address_part = address_part.substring(auth_pos+1);
+
+    }
+
+    var db_pos = address_part.indexOf("/");
+    if(db_pos >= 0) {
+      db_part = address_part.substring(db_pos+1);
+      address_part = address_part.substr(0,db_pos);
+    }
+
+    if(!address_part) {
+      return null;
+    }
+
+    return {"address":address_part,
+            "db" : db_part,
+            "params" : params_part,
+            "username" : username_part,
+            "password" : password_part};
+  }
+
+  $.validator.addMethod("mongouri", function(value, element) {
+    return parseMongoUri(value);
+  }, "Invalid MongoDB URI format");
+
+  //
+  // Validate the specified form
+  // 
+  function validateForm(formId) {
+      $(formId).validate({
+	  onkeyup: false,
+	  messages: {
+		password2: {
+	  	    equalTo: "Please enter the same password as above."
+		}
+	  }
+      });
+  }
+
+  //
+  // Open the specified jQuery UI Dialog
+  // 
+  function openDialog(dialogId, e) {
+
+      if (e != null) {
+	  if (!e) var e = window.event;
+          e.cancelBubble = true;
+	  if (e.stopPropagation) {
+	      e.stopPropagation();
+          }
+      }
+
+      $(dialogId).dialog('open');
+      
+      $(dialogId).find("input:visible:first").focus();
+  }
+
+  //
+  // Open the specified jQuery UI Dialog and CodeMirror JSON editor
+  // 
+  function openDefaultEditorDialog(dialogId, textAreaId, defaultJSONStr, e) {
+
+      openDialog(dialogId, e);
+
+      openCodeMirrorEditor(dialogId, textAreaId, defaultJSONStr, true, "273px", "100px"); 
+  }
+
+  function openEditorDialog(dialogId, textAreaId, defaultJSONStr, width, height, e) {
+
+      openDialog(dialogId, e);
+
+      openCodeMirrorEditor(dialogId, textAreaId, defaultJSONStr, true, width, height); 
+  }
+
+  function openCodeMirrorEditor(editorId, textAreaId, defaultJSONStr, prettyFlag, width, height) {
+
+      var $textarea = $("#"+textAreaId);
+      if($textarea.hasClass("codemirrored")) {
+        return;
+      }
+      CodeMirror.defineInitHook(initCallback);
+      myCodeMirror = CodeMirror.fromTextArea(document.getElementById(textAreaId), {
+          mode: { name: 'javascript', json: true },
+          theme: 'mongolab',
+          indentUnit: 4,
+          tabSize: 4,
+          lineNumbers: false,
+          showCursorWhenSelecting: true,
+          matchBrackets: true,
+          lineWrapping: true
+      });
+      $textarea.addClass("codemirrored");
+
+      // set initial value
+      var jsonStr = $textarea.val();
+      if (jQuery.trim(jsonStr) == "") {
+        jsonStr = defaultJSONStr;
+      }
+      if (prettyFlag) {
+        jsonStr = prettifyJSONStr(jsonStr);
+      }
+      myCodeMirror.setValue(jsonStr);
+
+      // set width & height
+      myCodeMirror.setSize(width, height);
+
+      $(editorId).data(textAreaId, myCodeMirror);
+  }
+
+  function initCallback() {
+    // empty by default
+  }
+  
+  //
+  // Return a pretty JSON string given a JSON string
+  //
+  function prettifyJSONStr(jsonStr) {
+
+    var prettyJSON = "";
+    try {
+      if (jsonStr != null && jQuery.trim(jsonStr) != "") {
+         prettyJSON = JSON.stringify(JSON.parse(jsonStr), null, "    ");
+      }
+    }
+    catch (e) {
+      return jsonStr;
+    }
+
+    return prettyJSON;
+  }
+
+  //
+  // Return a pretty JSON string given a JSON object
+  //
+  function prettifyJSONObj(jsonObj) {
+    var prettyJSON = "";
+
+    try {
+      if (jsonObj != null) {
+         prettyJSON = JSON.stringify(jsonObj, null, "    ");
+      }
+    }
+    catch (e) { alert("prettifyJSONObj -" + e); }
+
+    return prettyJSON;
+  }
+
+  //
+  // Show the specified help box
+  //
+  function showHelp (topic, event) {
+    var $help = $(".specificHelp:has(h1:contains("+topic+"))");
+    if($help.css("opacity") == 0 || $help.css("display") == "none") {
+      positionSpecificHelp($help, event);
+    }
+    var numShown = $(".specificHelp.showing").length;
+    $help.addClass("showing");
+    $help.css("z-index", numShown * 2 + 100);
+    $help.stop().fadeTo("normal", 1);
+    var $otherHelp = $(".specificHelp.showing").not(":has(h1:contains("+topic+"))");
+    $otherHelp.stop().fadeTo("normal", 0.3);
+    var $generalHelp = $(".generalHelp:visible");
+    $generalHelp.stop().fadeTo("normal", 0.2);
+  }
+
+  function bindSpecificHelp( $jquerySet, topic ) {
+    $jquerySet.addClass('help');
+    $jquerySet.hover(
+      function(event) {
+        showHelp(topic, event);
+      },
+      function() {
+        hideHelp(topic);
+      }
+    );
+  }
+
+  //
+  // Hide the specified help box
+  //
+  function hideHelp (topic) {
+    var $help = $(".specificHelp:has(h1:contains("+topic+"))");
+    $help.removeClass("showing");
+    $help.stop().fadeTo("normal", 0, function() { $help.hide() });
+    if($(".specificHelp.showing").length == 0) {
+      var $generalHelp = $(".generalHelp:visible");
+      $generalHelp.stop().fadeTo("normal", 1);
+    } else {
+      // find showing help with highest z-index
+      var max = 0;
+      var $newHelp = null;
+      $(".specificHelp.showing").each(function() {
+        var z = $(this).css("z-index");
+        if(z > max) {
+          max = z;
+          $newHelp = $(this);
+        }
+      });
+      if($newHelp.length) {
+        $newHelp.stop().fadeTo("normal", 1);
+      }
+    }
+  }
+
+  function positionSpecificHelp($help, event) {
+    var top = event.pageY - Math.round($help.height() / 2);
+    var min = $(window).scrollTop() + 10;
+    var max = $(window).scrollTop() + $(window).height() - $help.height() - 40 - 10;
+    if(max < 0) {
+      max = 0;
+    }
+    if(top > max) {
+      top = max;
+    }
+    if(top < min) {
+      top = min;
+    }
+    $help.css("top", top);
+  }
+
+  function toggleInlineHelp(id) {
+    var $div = $("#"+id);
+    if($div.hasClass("showing")) {
+      hideInlineHelp(id);
+    } else {
+      showInlineHelp(id);
+   }
+  }
+
+  function showInlineHelp(id) {
+    var $div = $("#"+id);
+    if(!$div.hasClass("showing")) {
+      hideInlineHelp();
+      $div.addClass("showing");
+      $div.slideDown();
+    }
+  }
+
+  function hideInlineHelp() {
+    var $helps = $(".inlineHelp.showing");
+    $helps.removeClass("showing");
+    $helps.slideUp();
+  }
+
+  function closeInlineHelp() {
+    var $helps = $(".inlineHelp.showing");
+    $helps.removeClass("showing");
+    $helps.hide();
+  }
+
+  function centerDiv(selector) {
+    $(selector).css('top', Math.max(0, (($(window).height() - $(selector).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+    $(selector).css('left', Math.max(0, (($(window).width() - $(selector).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+  }
+
+  //
+  // Open the specified Modal Loading Indicator (defined in header.jsp)
+  //
+  function openModalLoadingIndicator(formId, title) {
+    // if the specified form is valid
+    if ($(formId).valid()) {
+
+      // show the mask
+      $('#modalMask').show();
+      $('#modalMask').fadeTo("fast", 0.6);
+
+      // set the specified title
+      $("#modalLoadingIndicator .title").html(title);
+
+      // center the modal loading indicator
+      centerDiv("#modalLoadingIndicator");
+      $("#modalLoadingIndicator").show();
+    }
+  }
+
+  function closeModalLoadingIndicator() {
+	  $('#modalMask').hide();
+      $("#modalLoadingIndicator").hide();
+  }
+
+  //
+  // Function to add commas to numbers
+  //  
+  $.fn.commas = function() { 
+    return this.each(function(){ 
+      $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+    })
+  }
+
+  //
+  // Function to round to 3 decimal places
+  //  
+  $.fn.round = function() { 
+    return this.each(function(){ 
+      $(this).text( $(this).text(parseFloat($(this).text()).toFixed(3)));
+    })
+  }
+
+  //
+  // Function to dynamically reset the #body height
+  //
+  function resetBodyHeight() {
+    // 1500 is the sum of the padding-top & padding-bottom as specificied in main.css
+    var height = window.innerHeight - $("#header").outerHeight() - $("#preFooterBar").outerHeight() - $("#footer").outerHeight() - 150;
+    $("#body").css("min-height", height)
+  }
+
+  var CURRENT_PATH_INFO = [];
+  
+    
+    
+      
+      
+        CURRENT_PATH_INFO.push( {"type": "database" , "display-type": "db", "name" : 'challenge_u_tester'} );
+      
+    
+  
+  
+    CURRENT_PATH_INFO.push( {"type": "collection" , "name" : 'users'} );
+  
+  
+
+  function getEntityUrl(entityType) {
+    var url = "";
+    var documentId = null;
+
+    for(var i in CURRENT_PATH_INFO) {
+      var k = CURRENT_PATH_INFO[i]["type"];
+      var name = CURRENT_PATH_INFO[i]["name"];
+      if(k != "document") {
+        url += '/' + k + 's/' + name;
+      } else {
+        documentId = name;
+      }
+
+      if(k == entityType || (k == "connection" && CURRENT_PATH_INFO[i]["connectionType"] == entityType)) {
+        break;
+      }
+    }
+
+    if(documentId) {
+      url += '/'+documentId;
+    }
+
+    return url;
+  }
+
+  function getRootApiUrl() {
+    
+      
+        return "https://api.mongolab.com/api/1";
+      
+      
+    
+  }
+
+  function getApiUrl(resourceType) {
+    return getRootApiUrl()+getEntityUrl(resourceType);
+  }
+
+  var BACKUP_API_URL = "https://mongolab.com/mbs";
+  var PAGE_ERRORS = {};
+    </script>
+
+
+
+
+
+
+
+
+
+    <style type="text/css">
+      #editViewDialog p {
+        font-size: 12px;
+        margin: .5em 0;
+      }
+
+      #editViewDialog pre {
+        font-size: 11px;
+      }
+
+      #createIndexDialog p {
+        font-size: 13px;
+        margin: .5em 0;
+      }
+
+      #createIndexDialog pre {
+        font-size:90%;
+      }
+
+      #body #colWrapper #mainCol { width:717px;}
+      #body #colWrapper #sidebar { width:357px;}
+      .generalHelp, .specificHelp { width:315px;}
+
+    </style>
+  <style type="text/css" style="display: none !important;">object:not([type]),object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase*="swflash.cab"],object[data*=".swf"],embed[type="application/x-shockwave-flash"],embed[src*=".swf"],object[type="application/x-shockwave-flash"],object[src*=".swf"],object[codetype="application/x-shockwave-flash"],iframe[type="application/x-shockwave-flash"],object[classid$=":166B1BCA-3F9C-11CF-8075-444553540000"],object[codebase*="sw.cab"],object[data*=".dcr"],embed[type="application/x-director"],embed[src*=".dcr"],object[type="application/x-director"],object[src*=".dcr"],object[classid$=":15B782AF-55D8-11D1-B477-006097098764"],object[codebase*="awswaxf.cab"],object[data*=".aam"],embed[type="application/x-authorware-map"],embed[src*=".aam"],object[type="application/x-authorware-map"],object[src*=".aam"],object[classid*="32C73088-76AE-40F7-AC40-81F62CB2C1DA"],object[type="application/ag-plugin"],object[type="application/x-silverlight"],object[type="application/x-silverlight-2"],object[source*=".xaml"],object[sourceelement*="xaml"],embed[type="application/ag-plugin"],embed[source*=".xaml"]{display: none !important;}</style><style>#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji{border:solid 2px #fff !important;box-sizing:content-box !important;color:#fff !important;display:block !important;height:auto !important;margin:0 !important;opacity:0.9 !important;padding:7px 10px !important;position:fixed !important;visibility:visible !important;width:auto !important;z-index:2147483647 !important;-webkit-border-radius:5px !important;-webkit-box-shadow:0px 0px 20px #000 !important;-webkit-box-sizing:content-box !important;}.hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji-blocked{color:#777 !important;display:inline !important;text-decoration:line-through !important;}#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji br{display:block !important;}#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji span{background:transparent !important;}#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji div{border:0 !important;margin:0 !important;padding:0 !important;width:auto !important;letter-spacing:normal !important;font:13px Arial,Helvetica !important;text-align:left !important;text-shadow:none !important;text-transform:none !important;word-spacing:normal !important;}#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji a{font-weight:normal !important;background:none !important;text-decoration:underline !important;color:#fff !important;}@media print{#hdhfgpxtgzfrvbpxbtggbzakmweyzbkbji{display:none !important;}}</style><meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;jQuery&quot;:&quot;1.7.1&quot;,&quot;jQuery UI&quot;:&quot;1.8.2&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+
+  <body style="">
+    
+      
+    
+
+
+
+
+
+
+
+
+<div id="header">
+  <div class="wrap">
+    <div class="logo">
+      <a href="https://mongolab.com/">MongoLab</a>
+    </div>
+    <div class="links" style="">
+      <a id="headerWelcomeLink" href="https://mongolab.com/welcome" class="marketingLink" style="">Welcome</a>
+      <a href="https://mongolab.com/products" class="marketingLink">Products</a>
+      <a href="https://mongolab.com/products/pricing" class="marketingLink">Pricing</a>
+      <a href="https://support.mongolab.com/" target="_blank">Support</a>
+      <a id="headerAccountLink" href="https://mongolab.com/account-details" style="">Account</a>
+      <a id="headerSignupLink" href="https://mongolab.com/signup" class="signup" style="display: none;">Sign up</a>
+      <a id="headerHomeLink" href="https://mongolab.com/home" class="login" style="display:none;">Manage</a>
+      <a id="headerLoginLink" href="https://mongolab.com/login" class="login" style="display: none;">Log in</a>
+      <a id="headerLogoutLink" href="https://mongolab.com/logout" class="login" style="">Log out</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- if not logged in -->
+  
+
+  <!-- if logged in -->
+  
+
+    
+      
+        <script type="text/javascript">showLogoutLink(); showAccountLinks();</script>
+      
+      
+    
+
+    <!-- if not ok to have a billing relationship -->
+    
+
+    <!-- Account Links -->
+    <div id="headerAccountLinks">
+       { <span>user</span>: "<a href="https://mongolab.com/user?username=James+Barney">James Barney</a>", <span>account</span>: "<a href="https://mongolab.com/account-details/">James Barney</a>" }
+    </div>
+  
+
+
+<!-- Modal Loading Indicator -->
+<div id="modalLoadingIndicator" style="display: none;" class="roundedCorners">
+  <div>
+    <div class="title">[This is the title]</div>
+    <div class="loadingIndicatorBig"></div>
+  </div>
+</div>
+<div id="modalMask"></div>
+
+<!-- Modal JSON Validation Error Dialog -->
+
+
+<script type="text/javascript">
+
+  //
+  // Mailto specified address and include username, if available
+  //
+  function mailto(subject) {
+    var email = encodeURIComponent("MongoLab Support <support@mongolab.com>");
+    var username = 'James Barney';
+    var account = 'James Barney';
+    var body = encodeURIComponent('{ user : "'+username+'", account : "'+account+'" }');
+    if (subject == null) {
+      subject = " ";
+    } else {
+      subject = encodeURIComponent(subject);
+      }
+    if (username == null || username == "" || account == null || account == "") {
+    location.href="mailto:"+email;
+    }
+    else {
+    href = "mailto:"+email+"?subject="+subject+"&body='"+body+"'";
+    location.href=href
+    }
+    }
+
+    function openCurrentApiView(endpoint) {
+    var params = getUrlParams();
+
+    delete params["pageNum"];
+    delete params["pageSize"];
+    params.view = 'admin';
+    params.apiKey = 'TBvstJJNjjzR9RafIFLDX0I94wUs0Iqf';
+
+    if(endpoint) {
+    endpoint = "/"+endpoint;
+    }
+
+    window.open(getApiUrl()+(endpoint || '')+serializeUrlParams(params));
+    }
+</script>
+
+
+
+
+
+    
+
+    <!-- capped collection delete info dialog -->
+    
+
+    <div id="body" style="min-height: 111px;">
+      <div id="colWrapper" style="width: 1182px;">
+        <div id="mainCol" style="width: 717px;">
+
+          
+
+
+<!-- BREADCRUMB -->
+<div id="breadcrumbs"><a href="https://mongolab.com/home">Home</a> : {<span class="label">&nbsp;db</span> : "<a href="https://mongolab.com/databases/challenge_u_tester">challenge_u_tester</a>"}</div>
+
+<script type="text/javascript">
+  $(document).ready( function() {
+    if(CURRENT_PATH_INFO.length > 1) {
+      $("#breadcrumbs").append(' : {');
+
+      var url = "";
+      var link;
+      for(var i = 0; i < CURRENT_PATH_INFO.length-1; i++) {
+        var pathElem = CURRENT_PATH_INFO[i];
+        var label = pathElem["display-type"] || pathElem["type"];
+        var type = pathElem["type"];
+        var name = pathElem["name"];
+        url += '/' + type + 's/' + name;
+        link = '<span class="label">&nbsp;'+label+'</span> : "<a href="'+url+'">'+name+'</a>"';
+        $("#breadcrumbs").append(link);
+      }
+
+      // delimit
+      $("#breadcrumbs .label").not(":first").before('<span class="divider"/>');
+
+      $("#breadcrumbs").append('}');
+    } 
+  } );
+</script>
+
+
+
+          <h1 style="display: inline">Collection: <a onclick="location.href = location.pathname;">users</a></h1> <span style="font-size: 12px">(<a class="link" onclick="openDialog(&#39;#renameDialog&#39;, event);">rename</a>)</span>
+          
+          <div class="h1ActionBtns">
+
+            <div class="sidebarBtn icon show" title="Show info sidebar" style="display: none;"></div>
+
+            
+              <!-- <a onclick="openDialog('#renameDialog', event);">rename</a> -->
+              
+            
+          </div>
+
+          
+
+          <div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+
+            <ul style="" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+              <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#documents">Documents</a></li>
+              
+                <li class="ui-state-default ui-corner-top"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#indexes">Indexes</a></li>
+              
+              <li class="ui-state-default ui-corner-top"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#stats">Stats</a></li>
+              <li class="ui-state-default ui-corner-top"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#tools">Tools</a></li>
+            </ul>
+
+            <!--               -->
+            <!-- Documents tab -->
+            <!--               -->
+            <div id="documents" style="" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+
+              <h2>Documents</h2>
+              <div class="h2ActionBtns">
+                
+                  <a class="button documentLink" id="doc_link__new" tabindex="0" href="https://mongolab.com/databases/challenge_u_tester/collections/users/_new?pageSize=10&pageNum=0&totalCount=1&"><span>Add</span></a>
+                  
+                    
+                    
+                      <a class="button" onclick="openDialog(&#39;#clearCollectionDialog&#39;, event);" tabindex="0"><span>Delete all</span></a>
+                      
+                    
+                  
+                
+                
+
+              </div>
+              <div class="clearer"></div>
+
+              
+                
+              
+
+
+
+  
+
+
+
+              <div id="savedSearchSelectionArea">
+                <select id="savedSearchSelection" style="max-width: 75%; font-size: inherit;">
+                  
+                    <option id="noSavedSearchOption">--- Start new search ---</option>
+                  
+                  
+                  <option id="newSearchOption">[new search]</option>
+                  
+                </select>
+                
+                <a id="hideSearchCriteriaBtn" class="f-right" style="display: none;">hide</a>
+                <a id="showSearchCriteriaBtn" class="f-right" style="display: none;">show</a>
+                <div class="tinyLineBreak"></div>
+                <div class="tinyLineBreak"></div>                
+                <div class="clearer"></div>
+                
+              </div>
+              <div id="searchQuery" style="display:none;">
+
+                <form method="GET" id="searchForm">
+
+                  <div class="f-left" style="width: 60%">
+                    <label style="color: white;">Query<span class="tip">blank returns all objects</span>:</label>
+                    <textarea id="query" style="display: none;" class="codemirrored ui-corner-all"></textarea><div class="CodeMirror cm-s-mongolab CodeMirror-wrap" style="width: 95%; height: 135px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" class="ui-corner-all" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>x</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div>
+                    <input type="hidden" name="q">
+                  </div>
+
+                  <div class="f-left" style="width: 40%">
+                    <label style="color: white;">Sort order<span class="tip">1: asc, -1: desc</span>:</label>
+                    <textarea id="sortOrder" style="display: none;" class="codemirrored ui-corner-all">e.g. { "name":1 }</textarea><div class="CodeMirror cm-s-mongolab CodeMirror-wrap" style="width: 100%; height: 60px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" class="ui-corner-all" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>x</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div>
+                    <input type="hidden" name="s">
+
+                    <label style="color: white;">Subset of fields<span class="tip">1: include, 0: exclude</span>:</label>
+                    <textarea id="fields" style="display: none;" class="codemirrored ui-corner-all">e.g. { "name":1, "email":1 }</textarea><div class="CodeMirror cm-s-mongolab CodeMirror-wrap" style="width: 100%; height: 60px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" class="ui-corner-all" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>x</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div>
+                    <input type="hidden" name="f">
+                  </div>
+
+                  <input type="hidden" name="pageSize" value="10">
+                </form>
+
+                <div class="clearer"></div>
+                <div class="tinyLineBreak"></div>
+                <div>
+                  <a class="button" id="searchBtn" onclick="submitSearchForm(&#39;#searchForm&#39;);" tabindex="0">
+                    <span>Search</span>
+                  </a>
+                  <a class="button" onclick="openSaveSearchDialog(event);" tabindex="0">
+                    <span>Save this search</span>
+                  </a>
+                  <a class="button" onclick="$(&quot;#savedSearchSelection option[value=\x27\x27]&quot;).attr(&quot;selected&quot;, &quot;selected&quot;); $(&quot;#savedSearchSelection&quot;).change();" tabindex="0">
+                    <span>Reset</span></a>
+                  <!--
+                  <a class="button" onclick="clearSearchForm('#searchForm');">
+                    <span>Clear2</span></a>
+                  -->
+                  <!--
+                  <a class="button" onclick="resetPage();">
+                    <span>Cancel</span></a>
+                  -->
+                </div>
+                
+              </div>
+
+              <div id="emptySearchResults" style="display: none;">
+                <h3>Search Results</h3>
+                <table>
+                  <tbody>
+                    <tr class="odd link" style="height: 250px">
+                      <td style="text-align: center;" onclick="submitSearchForm(&#39;#searchForm&#39;);">
+                        Click here (or the 'Search' button) to see results for your search criteria
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="searchResults" style="">
+
+                                
+                  
+                  
+                    <h3 id="searchResultsHd" style="margin-top: 15px;">All Documents</h3>
+                  
+                
+
+                
+                
+
+                  <div class="h2ResultBtns">
+                    Display mode:
+
+                    <label>
+                      <input type="radio" name="mode" value="list" checked="checked"> list</label>
+                    <label>
+                      <input type="radio" name="mode" value="table"> table</label>
+
+                    <label id="editViewLink">
+                      (<a class="link" onclick="openEditTableViewEditor(event);"><span>edit table view</span></a>)</label>
+
+                    <label class="f-right sidebarBtn hide" style="">
+                      <a class="link">widen column</a> ⇒
+                    </label>
+                    <label class="f-right sidebarBtn show" style="display: none;">
+                      ⇐ <a class="link">narrow column</a>
+                    </label>
+
+                  </div>
+
+                  <!-- START top pagination -->
+                  <form class="f-left paginatorForm" method="GET" action="">
+                    Records / page
+                    <select onchange="this.form.submit()" name="pageSize" value="10">
+                      
+                        
+                          
+                            <option value="10" selected="true">10</option>
+                          
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="20">20</option>
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="50">50</option>
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="100">100</option>
+                          
+                        
+                      
+                    </select>
+                    <input type="hidden" name="q">
+                    <input type="hidden" name="s">
+                    <input type="hidden" name="f">
+                  </form>
+
+                  <div class="f-right paginatorNav" style="margin-right: 20px;">
+                    
+                    
+                      
+                      
+                      
+                        [1 - 1 of 1]
+                      
+                    
+
+                    
+                  </div>
+                  <div class="clearer"></div>
+                  <!-- END top pagination -->
+
+                  <!--                           -->
+                  <!-- Documents tab - list mode -->
+                  <!--                           -->
+                  <div id="listMode" class="listMode">
+                    <table>
+                      <tbody>
+			
+                        
+                          
+                            
+                          
+                          
+                          
+                          
+                            
+			    
+                              <tr class="even ">
+				<td>
+				  <a class="documentLink" id="doc_link_528da2ad3b2c4661a6000004" href="https://mongolab.com/databases/challenge_u_tester/collections/users/528da2ad3b2c4661a6000004?pageSize=10&pageNum=0&totalCount=1&">
+                                    <textarea class="code ui-corner-all" id="document0" readonly="readonly"></textarea>
+                                    <span class="rjsdoc" id="rjsd0" readonly="readonly"></span>
+				  </a>
+				</td>
+				
+				  
+				  
+                                    <td class="actionBtns" onclick="openDialog(&#39;#deleteDialog0&#39;, event);">
+                                      <button class="delete"></button>
+                                      
+                                    </td>
+				  
+				  
+				
+			    
+			  
+                          </tr>
+                          <script type="text/javascript">
+                            var prettyJSON = prettifyJSONStr('{ \"_id\" : { \"$oid\" : \"528da2ad3b2c4661a6000004\"} , \"__v\" : 3 , \"comments\" : [ ] , \"completedChallenges\" : [ { \"name\" : \"test\" , \"dateCompleted\" : { \"$date\" : \"2013-11-21T06:06:24.443Z\"} , \"_id\" : { \"$oid\" : \"528da2e03b2c4661a6000005\"}} , { \"name\" : \"Streak The Quad\" , \"dateCompleted\" : { \"$date\" : \"2013-11-21T06:46:43.280Z\"} , \"_id\" : { \"$oid\" : \"528dac533b2c4661a6000006\"}} , { \"name\" : \"I Scream for Kline\'s Ice Cream\" , \"dateCompleted\" : { \"$date\" : \"2013-11-21T07:39:09.944Z\"} , \"_id\" : { \"$oid\" : \"528db89d3b2c4661a6000007\"}}] , \"dateJoined\" : { \"$date\" : \"2013-11-21T06:05:32.980Z\"} , \"gender\" : \"Male\" , \"graduationYear\" : 0 , \"institution\" : \"\" , \"major\" : \"\" , \"name\" : \"Tim\" , \"password\" : \"1234\" , \"totalScore\" : 150 , \"picURL\" : \"\/img\/IMAG0615.jpg\"}');
+                            $( "#rjsd0" ).val( prettyJSON );
+                            if (prettyJSON.length > JSON_DISPLAY_SIZE_LIMIT) {
+                            prettyJSON = prettyJSON.substring(0, JSON_TRUNCATE_SIZE) + "\n[JSON object truncated...]"
+                            }
+                            $("#document0").val(prettyJSON);
+                          </script>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--                            -->
+                  <!-- Documents tab - table mode -->
+                  <!--                            -->
+
+                  <div id="tableMode" class="tableMode" style="overflow: auto; display: none;">
+                    
+
+                    
+                      <table>
+                        <tbody>
+                          <tr class="odd link" style="height: 250px">
+                            <td style="text-align: center;" onclick="openEditTableViewEditor(event);">
+                              Click here to define a table view for this collection
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    
+
+                    
+                  </div>
+		  
+                  <!-- START bottom pagination -->
+                  <form class="f-left paginatorForm" method="GET" action="">
+                    Records / page
+                    <select onchange="this.form.submit()" name="pageSize" value="10">
+                      
+                        
+                          
+                            <option value="10" selected="true">10</option>
+                          
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="20">20</option>
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="50">50</option>
+                          
+                        
+                      
+                        
+                          
+                          
+                            <option value="100">100</option>
+                          
+                        
+                      
+                    </select>
+                    <input type="hidden" name="q">
+                    <input type="hidden" name="s">
+                    <input type="hidden" name="f">
+                  </form>
+
+                  <div class="f-right paginatorNav" style="margin-right: 20px;">
+                    
+                    
+                      
+                      
+                      
+                        [1 - 1 of 1]
+                      
+                    
+
+                    
+                  </div>
+                  <!-- END bottom pagination -->
+
+                
+              </div> <!-- END #searchResults -->
+            </div> <!-- END #documents tab -->
+
+            <!--             -->
+            <!-- Indexes tab -->
+            <!--             -->
+            <div id="indexes" style="display: block;" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+              
+
+              
+                
+		  <div class="overlay" id="overlay0" style="display:none;"><a class="close"></a>
+		    <h1>db['system.indexes'].find() Raw Output</h1>
+		    <div class="tableHeader"></div>
+		    <pre><script type="text/javascript">document.write(JSON.stringify({ "v" : 1 , "key" : { "_id" : 1} , "ns" : "challenge_u_tester.users" , "name" : "_id_"}, null, "  "));</script>{
+  "v": 1,
+  "key": {
+    "_id": 1
+  },
+  "ns": "challenge_u_tester.users",
+  "name": "_id_"
+}</pre><table>
+		      <tbody><tr class="nolink">
+			
+		      </tr>
+		    </tbody></table>
+		  </div>
+		
+
+                <h2>Indexes</h2>
+
+                <div class="h2ActionBtns">
+                  
+                    <a class="button" onclick="openCreateIndexDialog(event);" tabindex="0"><span>Add</span></a>
+                  
+                </div>
+
+                
+                  
+                
+
+
+
+  
+
+
+
+                
+                
+
+                  <table id="indexTable">
+                    <thead>
+                      <tr>
+                        <th nowrap="nowrap" scope="col">Indexed field(s)</th>
+                        <th scope="col">Unique</th>
+                        <th scope="col" class="help">Sparse</th>
+                        <th scope="col" class="help">Size</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      
+                          
+                          
+                            
+                          
+                          
+                          <tr class="even link" title="View complete index definition">
+                              <td rel="#overlay0">{ "_id" : 1}</td>
+                              <td>
+                                  
+                                      
+                                          (true)
+                                      
+                                      
+                                      
+                                  
+                              </td>
+
+                              <td class="help">
+                                  
+                                      
+                                      
+                                          (false)
+                                      
+                                  
+                              </td>
+
+                              
+                                  
+                                  
+                                      <td class="help">7.98 KB</td>
+                                  
+                              
+                              
+                                  <td class="actionBtns" onclick="openDialog(&#39;#deleteIndexDialog0&#39;, event);">
+                                      
+                                  </td>
+                              
+                          </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                
+
+              
+
+              
+				    
+		  
+		  
+   		    
+		  
+		  		  
+   		    
+		
+
+
+
+
+
+
+<script>
+
+  function openCreateIndexDialog(event) {
+
+    var initialValue = '{ "fieldName" : 1 }';
+    
+
+    openEditorDialog("#createIndexDialog", "indexTextArea", initialValue, "325px", "300px", event);
+    $( "#createIndexDialog" ).dialog( "option", "width", 682 );
+    }
+
+  $(document).ready( function() {
+    initEditorDialog("#createIndexDialog", "indexTextArea", "json", "Create in background");
+  });
+
+
+</script>
+
+		
+              
+            </div> <!-- end #indexes -->
+
+            <!--           -->
+            <!-- Stats tab -->
+            <!--           -->
+            <div id="stats" style="display: block;" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+              
+              
+	      <div class="h2">
+              <h2>Collection Metrics</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="odd nolink">
+                    <td>capped</td>
+                    <td>If capped, <code>true</code> or <code>1</code>; otherwise, empty
+                      <span class="tip"><a href="http://docs.mongodb.org/manual/core/capped-collections/" target="_blank">docs</a></span>
+                    </td>
+                    <td></td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>max</td>
+                    <td>If capped, max number of documents</td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd nolink">
+                    <td>count</td>
+                    <td>Number of documents</td>
+                    <td>1</td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>nindexes</td>
+                    <td>Number of indexes</td>
+                    <td>1</td>
+                  </tr>
+                  <tr class="odd nolink">
+                    <td>numExtents</td>
+                    <td>
+                      Number of filesystem extents allocated for this
+                      collection
+                    </td>
+                    <td>1</td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>lastExtentSize</td>
+                    <td>
+                      Size of the last filesystem extent allocated
+                      for this collection
+                    </td>
+                    <td class="nowrap">
+                      8.00 KB
+                    </td>
+                  </tr>
+                  <tr class="odd nolink">
+                    <td>paddingFactor</td>
+                    <td>
+                      Factor by which space allocated for documents
+                      is padded to accommodate future updates. Value is
+                      dynamic and based on update patterns
+                    </td>
+                    <td>1.003</td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>flags</td>
+                    <td>If 1, index on _id generated. 0 otherwise</td>
+                    <td></td>
+                  </tr>
+                  <tr class="odd nolink">
+                    <td>avgObjSize</td>
+                    <td>
+                      Average document size for this collection
+                    </td>
+                    <td class="nowrap">
+                      0.45 KB
+                    </td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>size</td>
+                    <td>
+                      This is the total size of all documents stored in this collection, including the padding factor
+                      (does not include indexes).
+                    </td>
+                    <td class="nowrap">
+                      464.00 B
+                    </td>
+                  </tr>
+                  <tr class="odd nolink">
+                    <td>storageSize</td>
+                    <td>
+                      Total storage allocated for data for this collection (does not include index storage). This number is
+                      larger than dataSize because it includes additional space (preallocation within data files as well as
+                      space left by deleted or moved documents). If capped, storageSize is the max size.
+                    </td>
+                    <td class="nowrap">
+                      8.00 KB
+                    </td>
+                  </tr>
+                  <tr class="even nolink">
+                    <td>totalIndexSize</td>
+                    <td>
+                      Total storage size for all indexes for this collection
+                    </td>
+                    <td class="nowrap">
+                      7.98 KB
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+	      </div>
+	      <div class="h2">
+              <h2>db.users.stats() Raw Output</h2>
+              <pre><script type="text/javascript">document.write(JSON.stringify({ "serverUsed" : "ds053438-a.mongolab.com/10.10.29.77:53438" , "ns" : "challenge_u_tester.users" , "count" : 1 , "size" : 464 , "avgObjSize" : 464.0 , "storageSize" : 8192 , "numExtents" : 1 , "nindexes" : 1 , "lastExtentSize" : 8192 , "paddingFactor" : 1.0030000000000001 , "systemFlags" : 1 , "userFlags" : 0 , "totalIndexSize" : 8176 , "indexSizes" : { "_id_" : 8176} , "ok" : 1.0}, null, "  "));</script>{
+  "serverUsed": "ds053438-a.mongolab.com/10.10.29.77:53438",
+  "ns": "challenge_u_tester.users",
+  "count": 1,
+  "size": 464,
+  "avgObjSize": 464,
+  "storageSize": 8192,
+  "numExtents": 1,
+  "nindexes": 1,
+  "lastExtentSize": 8192,
+  "paddingFactor": 1.0030000000000001,
+  "systemFlags": 1,
+  "userFlags": 0,
+  "totalIndexSize": 8176,
+  "indexSizes": {
+    "_id_": 8176
+  },
+  "ok": 1
+}</pre>
+	      </div>
+            </div>
+
+	    <!--           -->
+	    <!-- Tools tab -->
+	    <!--           -->
+            <div id="tools" style="display: block;" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+              <div id="subtabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+                <ul style="" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+                  <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#importexport">import/export</a></li>
+                  <li class="ui-state-default ui-corner-top"><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#commands">commands</a></li>
+                </ul>
+                <div id="importexport" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+                  <h2>Import / Export Helper</h2>
+                  <div>
+                    <p>
+                      MongoDB provides two mechanisms for importing and exporting data. One way is via the <code>mongoimport</code> and <code>mongoexport</code> utilities. These allow you to import and export JSON and CSV representations of your data. The other way is with <code>mongorestore</code> and <code>mongodump</code> utilities which deal with binary dumps.
+                    </p>
+                    <p>
+                      In this tab we provide pre-filled strings for the commands that we find most useful.
+                    </p>
+                    <p>
+                      Copy and paste from below to import or export from this database. For a full list of options that can
+                      be used with these commands, please see <a href="http://docs.mongodb.org/manual/administration/import-export/" target="_blank">MongoDB's documentation</a> on this
+                      subject.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>Binary</h3>
+                    <div style="margin-left: 15px;">
+                      <h4>Import collection</h4>
+                      <code>
+                        <span class="prompt"></span> mongorestore -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; users.bson
+                      </code>
+                    </div>
+                    <div class="tinyLineBreak"></div>
+                    <div class="tinyLineBreak"></div>
+                    <div style="margin-left: 15px;">
+                      <h4>Export collection</h4>
+                      <code>
+                        <span class="prompt"></span> mongodump -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; -o &lt;output directory&gt;
+                      </code>
+                    </div>
+
+                </div>
+                  
+                  <div>
+                    <h3>JSON</h3>
+                    <div style="margin-left: 15px;">
+                      <h4>Import collection</h4>
+                      <code>
+                        <span class="prompt"></span> mongoimport -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; --file &lt;input file&gt;
+                      </code>
+                    </div>
+                    <div class="tinyLineBreak"></div>
+                    <div class="tinyLineBreak"></div>
+                    <div style="margin-left: 15px;">
+                      <h4>Export collection</h4>
+                      <code>
+                        <span class="prompt"></span> mongoexport -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; -o users.json
+                      </code>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h3>CSV</h3>
+                    <div style="margin-left: 15px;">
+                      <h4>Import collection</h4>
+                      <code>
+                        <span class="prompt"></span> mongoimport -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; --file &lt;input .csv file&gt; --type csv --headerline
+                      </code>
+                    </div>
+                    <div class="tinyLineBreak"></div>
+                    <div class="tinyLineBreak"></div>
+                    <div style="margin-left: 15px;">
+                      <h4>Export collection</h4>
+                      <code>
+                      <span class="prompt"></span> mongoexport -h ds053438.mongolab.com:53438 -d challenge_u_tester -c users -u &lt;user&gt; -p &lt;password&gt; -o users.csv --csv -f &lt;comma-separated list of field names&gt;
+                      </code>
+                    </div>
+                  </div>
+                </div>
+                <div id="commands" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide">
+                  <h2>Commands</h2>
+                  
+                    
+                  
+
+
+
+
+<script>
+var __COMMAND_GROUPS = {
+  "cluster" : {
+    "ping" :
+    { "display" : "ping",
+      "help" : "Checks if the primary server is alive.  Responds immediately even if the server is in a db lock." },
+    
+    "serverStatus" :
+    { "display" : "serverStatus",
+      "help" : "Gets a comprehensive set of administrative statistics about the primary server.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/serverStatus+Command'>MongoDB's documentation</a> for this command." },
+    "getCmdLineOpts" :
+    { "display" : "getCmdLineOpts",
+      "help" : "Gets the command line options used to start the primary <code>mongod</code> process." },
+    "top" :
+    { "display" : "top",
+      "help" : "Gets a breakdown of usage by collection." }
+  },
+  "server" : {
+    "ping" :
+      { "display" : "ping",
+        "help" : "Checks if the server is alive.  Responds immediately even if the server is in a db lock." },
+    "whatsmyuri" :
+      { "display" : "whatsmyuri",
+        "help" : "Gets your URI." },
+    "isMaster" :
+      { "display" : "isMaster",
+        "help" : "Checks whether this server is currently the master server" },
+    "replSetGetStatus" :
+      { "display" : "replSetGetStatus",
+        "help" : "Gets the status of this server's replica set.  This is the equivalent of <code>rs.status()</code> in the shell.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Replica+Set+Commands'>MongoDB's documentation</a> for this command." },
+    "replSetStepDown" :
+      { "display" : "replSetStepDown",
+        "template" : { "replSetStepDown" : 20 },
+        "help" : "This is the equivalent of <code>rs.stepDown()</code> in the shell.  If this server is the master/primary of this replica set, this will force the server to step down and be ineligible to become the master for the specified number of seconds.  All connections to the server will be dropped and the replica set will be unavailable until a new master is elected.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Replica+Set+Commands'>MongoDB's documentation</a> for this command." },
+    "replSetFreeze" :
+      { "display" : "replSetFreeze",
+        "template" : { "replSetFreeze" : 20 },
+        "help" : "If this server is not the current master/primary, this will cause the server to be ineligible to become the master for the next specified number of seconds.  Use this in conjunction with replSetStepDown to force a particular server to become the master.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Replica+Set+Commands'>MongoDB's documentation</a> for this command." },
+    "serverStatus" :
+      { "display" : "serverStatus",
+        "help" : "Gets a comprehensive set of administrative statistics about this server.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/serverStatus+Command'>MongoDB's documentation</a> for this command." },
+    "getCmdLineOpts" :
+      { "display" : "getCmdLineOpts",
+        "help" : "Gets the command line options used to start this <code>mongod</code> process." },
+    "top" :
+      { "display" : "top",
+        "help" : "Gets a breakdown of usage by collection." }
+  },
+  "db" : {
+    "ping" :
+      { "display" : "ping",
+        "help" : "Checks if the server is alive.  Responds immediately even if the server is in a db lock." },
+    "profile (-1)" :
+      { "display" : "profile (get current status)",
+        "template" : { "profile" : -1 },
+        "help" : "Gets the current profiling status for this database. The 'was' field tells you if profiling is currently off (0), logging slow operations (1) or logging all operations (2). The 'slowms' field defines the threshold for 'slow' in milliseconds." },
+    "profile (0)" :
+      { "display" : "profile (turn off)",
+        "template" : { "profile" : 0 },
+        "help" : "Turns off profiling of this database." },
+    "profile (1)" :
+      { "display" : "profile (log slow)",
+        "template" : { "profile" : 1 },
+        "help" : "Profiles/logs slow operations (100ms is MongoDB's default threshold) on this database to <code>system.profile</code>. For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Database+Profiler'>MongoDB's documentation</a> for this command." },
+    "profile (2)" :
+      { "display" : "profile (log all)",
+        "template" : { "profile" : 2 },
+        "help" : "Profiles/logs all operations on this database to <code>system.profile</code>. For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Database+Profiler'>MongoDB's documentation</a> for this command." },
+    "repairDatabase" :
+      { "display" : "repairDatabase",
+        "help" : "MongoDB maintains deleted lists of space within the datafiles when objects or collections are deleted.  This space is reused but never freed to the operating system. To compact this space, run this command.  Since this operation will block and is slow, we only support this command for databases 496 MB or below in file size." },
+    "whatsmyuri" :
+      { "display" : "whatsmyuri",
+        "help" : "Gets your URI." }
+  },
+  "collection" : {
+    
+      "convertToCapped" :
+        { "display" : "convertToCapped",
+          "template" : { "convertToCapped" : "users",
+                         "size" : 100000 },
+          "help" : "Converts this collection into a capped collection with a specified size in bytes (we've defaulted it to 100,000 bytes).  For more info, see <a target='blank' href='http://docs.mongodb.org/manual/core/write-operations/#write-concern'>MongoDB's documentation</a> for this command." },
+    
+    "distinct" :
+      { "display" : "distinct",
+        "template" : { "distinct" : "users",
+                       "key" : "<key>",
+                       "query" : {} },
+        "help" : "Gets a list of distinct values for <key> in documents in this collection matching the specified query." },
+    "findAndModify (update)" :
+      { "display" : "findAndModify (update)",
+        "template" : { "findAndModify" : "users",
+                       "query" : {},
+                       "sort" : {},
+                       "update" : {},
+                       "new" : false,
+                       "fields" : {},
+                       "upsert" : false },
+        "help" : "Atomically modifies a single document and either returns the pre-update document (if <code>new</code> set to false) or the new document.  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/findandmodify+Command'>MongoDB's documentation</a> for this command." },
+    "findAndModify (remove)" :
+      { "display" : "findAndModify (remove)",
+        "template" : { "findAndModify" : "users",
+                       "query" : {},
+                       "sort" : {},
+                       "remove" : true },
+        "help" : "Atomically removes a single document and returns the removed document." },
+    "geoNear" :
+      { "display" : "geoNear",
+        "template" : { "geoNear" : "users",
+                       "near" : [],
+                       "num" : 10 },
+        "help" : "Similar to the conditional <code>$near</code> except that it also returns the distance of each result document from the query point (specified by [ &lt;longitude&gt;, &lt;latitude&gt;]).  For more info, see <a target='blank' href='http://www.mongodb.org/display/DOCS/Geospatial+Indexing'>MongoDB's documentation</a> for this command." },
+    "reIndex" :
+      { "display" : "reIndex",
+        "template" : { "reIndex" : "users" },
+        "help" : "Rebuilds all indexes for this collection.  You may wish to do this if the size of your collection has changed dramatically or the disk space used by indexes seems oddly large." },
+    "text" :
+      { "display" : "text",
+        "template" : { "text" : "users", 
+        "search": "<enter search phrase here>",
+	"filter": {},
+	"project": {},
+	"limit": 100,
+	"language": "english"
+	 },
+        "help" : "Searches the text context stored in the <code>text</code> index for this collection. For more info, see the <a target='blank' href='http://docs.mongodb.org/manual/release-notes/2.4/#text-indexes'>2.4 Release Notes</a>." }
+  }
+};
+</script>
+
+<select id="commandSelect">
+  <option id="noCommandOption">--- select a command to run ---</option>
+<option value="convertToCapped">convertToCapped</option><option value="distinct">distinct</option><option value="findAndModify (update)">findAndModify (update)</option><option value="findAndModify (remove)">findAndModify (remove)</option><option value="geoNear">geoNear</option><option value="reIndex">reIndex</option><option value="text">text</option></select>
+<div id="commandDescArea" style="display: none;">
+  <h3>Description</h3>
+  <div id="commandDesc" style="margin-left: 20px"></div>
+</div>
+<form id="runCommandForm" style="display: none;">
+  <h3>Command</h3>
+  <textarea id="command" class="code ui-corner-all codemirrored" style="display: none;">{}</textarea><div class="CodeMirror cm-s-mongolab CodeMirror-wrap" style="width: 100%; height: auto;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none; font-size: 4px;"></textarea></div><div class="CodeMirror-hscrollbar"><div style="height: 1px;"></div></div><div class="CodeMirror-vscrollbar"><div style="width: 1px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer"><div style="position: relative;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>x</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"></div><div class="CodeMirror-cursor">&nbsp;</div><div class="CodeMirror-cursor CodeMirror-secondarycursor">&nbsp;</div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div>
+</form>
+<div style="margin-top:5px;">
+<a id="runCommandSubmit" class="button" style="display:none" onclick="submitRunCommand();" tabindex="0">Run command</a>
+</div>
+<div id="commandResultArea" style="display: none;">
+  <h3>Response from server</h3>
+  <pre id="commandResult"></pre>
+</div>
+
+<script type="text/javascript">
+
+  $(document).ready( function() {
+    //
+    // Open JSON editor
+    //
+    openCodeMirrorEditor("#runCommandForm", "command", "", true, "100%", "auto");
+
+    // populate command select
+    var entity = 'collection';
+    if( __COMMAND_GROUPS[entity] ) {
+      $select = $("#commandSelect");
+      var opts = __COMMAND_GROUPS[entity];
+      for ( var i in opts ) {
+        var name = i
+        var display = opts[i].display;
+        $select.append('<option value="'+name+'">'+display+'</option>');
+      }
+    }
+  } );
+
+  function submitRunCommand() {
+
+    var jsonStr = $("#runCommandForm").data("command").getValue();
+
+    try {
+      var jsonObj = JSON.parse(jsonStr);
+    }
+    catch (e) {
+
+      openDialog("#jsonErrorDialog", null);
+      return;
+    }
+
+    ajaxRunCommand(jsonStr);
+  }
+
+  function ajaxRunCommand(jsonStr) {
+    var response = ajaxRunDbCommand(jsonStr);
+    $("#commandResult").text(prettifyJSONStr(response));
+    $("#commandResultArea").show();
+  }
+
+  function ajaxRunDbCommand(jsonStr) {
+    var request = new XMLHttpRequest();
+    var url = getApiUrl("database");
+    url += "/runCommand?apiKey=TBvstJJNjjzR9RafIFLDX0I94wUs0Iqf";
+    request.open("POST", url, false); // synchronous
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    request.send(jsonStr);
+    return request.responseText;
+  }
+
+  $("#commandSelect").change(function () {
+
+    $("#commandResultArea").hide();
+
+    if ($("#noCommandOption:selected").val() != undefined) {
+      $("#commandDescArea").hide();
+      $("#runCommandForm").hide();
+      $("#commandResultArea").hide();
+      $("#runCommandSubmit").hide();
+    }
+    else {
+      var commandName = $("#commandSelect").val();
+      var entity = 'collection';
+      if( __COMMAND_GROUPS[entity] ) {
+        var commands = __COMMAND_GROUPS[entity];
+        var cmd = commands[commandName];
+        var jsonObj = {};
+        if(cmd["template"]) {
+          jsonObj = cmd["template"];
+        } else {
+          jsonObj[commandName] = 1;
+        }
+        $("#commandDesc").html(cmd.help);
+        $("#commandDescArea").show();
+        $("#runCommandForm").data("command").setValue(prettifyJSONObj(jsonObj));
+        $("#runCommandForm").show();
+        $("#runCommandForm").data("command").refresh();
+        $("#runCommandSubmit").show();
+      }
+    }
+  });
+
+</script>
+
+                </div>
+              </div>
+            </div> <!-- end #tools -->
+
+</div> <!-- END #tabs -->
+        </div> <!-- END #mainCol -->
+
+        <div id="sidebar" style="width: 357px;">
+
+          <label class="f-right sidebarBtn hide" style="margin-top: 20px;">
+            <a style="text-decoration: none; display: none;">hide info</a>
+          </label>
+
+          <div class="generalHelp tools commands importexport" style="display: none;">
+            <h1>Commands</h1>
+            <p>
+              The "commands" sub-tab allows you to run frequently-used collection-level MongoDB commands. These are
+              the same ones you could run via the <code>mongo</code> shell using 
+              <code>db.runCommand</code>.
+            </p>
+            <p>
+              To run server or database-level commands for this database, go 
+              <a href="https://mongolab.com/databases/challenge_u_tester#tools">here</a> or use the <code>mongo</code> shell.
+            </p>
+            <h1>Import / Export</h1>
+            <p>
+              For your convenience we provide, in the "import/export" sub-tab, pre-filled command-line strings for <code>mongorestore</code>, <code>mongodump</code>, <code>mongoimport</code> and <code>mongoexport</code>.
+            </p>
+          </div>
+          <div class="generalHelp stats" style="display: none;">
+            <h1>Collection Statistics</h1>
+            <p>
+              The "Stats" tab displays metrics on this particular collection in a table format with 
+              detailed descriptions.
+              
+              For your convenience, we also show the raw output straight from MongoDB's 
+              <code>db.&lt;collection name&gt;.stats()</code> command.
+              
+            </p>
+          </div>
+          <div class="generalHelp indexes" style="display: none;">
+            <h1>Indexes<span class="tip"><a href="http://docs.mongodb.org/manual/indexes/" target="_blank">full docs</a></span></h1>
+            <p>
+              From the "Indexes" tab you can manage indexes for this
+              collection. Index configuration is stored in the
+              <a href="https://mongolab.com/databases/challenge_u_tester/collections/system.indexes">system.indexes</a>
+              collection for this database, but you should create indexes either via this page or the <tt><a href="http://docs.mongodb.org/manual/reference/method/db.collection.ensureIndex/" target="_blank">ensureIndex</a></tt> method.
+	    </p>
+            <h1>Standard Indexes <span class="tip"><a href="http://docs.mongodb.org/manual/core/indexes/" target="_blank">full docs</a></span></h1>
+            <p>
+              From this UI, you can create simple or compound indexes that are optionally unique and/or sparse.  You can even index a key inside an embedded object (e.g. <code>address.city</code>).
+            </p>
+            <p>
+	      When you see indexed fields that look like:
+            </p>
+            <p>
+              <code>{ &lt;field-name&gt; : &lt;-1 or 1&gt; }</code>
+            </p>
+            <p>
+              ...the <tt>1</tt> indicates an ascending sort order and <tt>-1</tt> a descending sort order. Sort order only matters for compound indexes.
+            </p>
+
+            <h1>Geospatial Indexes <span class="tip"><a href="http://docs.mongodb.org/manual/core/geospatial-indexes/" target="_blank">full docs</a></span></h1>
+            <p>
+              You can also create a <tt>2d</tt> or <tt>2dsphere</tt> geospatial index here. <tt>2dsphere</tt> index supports queries that calculate geometries on an earth-like sphere and is only available in MongoDB 2.4 and above.
+            </p>
+            <p>
+              Please note that MongoDB currently allows only one geospatial index per collection.  If you'd like to replace an existing index, delete it and add another one.
+            </p>
+          </div>
+
+          <div class="generalHelp documents" style="">
+            
+              
+              
+              
+                <h1>Documents (aka Objects)</h1>
+                <p>
+                  From the "Documents" tab you can browse and search for objects in this
+                  collection. All standard query constructs
+                  are supported except for <code>map/reduce</code> queries.
+                  To use <code>map/reduce</code>, use the MongoDB shell (note
+                  that temporary result collections will be viewable in MongoLab).
+                </p>
+                <p>
+                  You can also add, edit, and delete individual documents from
+                  here. Bulk collection updates are not yet supported in this
+                  UI (although they are supported in the shell).
+                </p>
+              
+            
+          </div>
+          <div class="generalHelp documentsSearch" style="display: none;">
+            <h1>
+              Query - Quick Reference<span class="tip"><a href="http://docs.mongodb.org/manual/reference/operator/" target="_blank">full docs</a></span>
+            </h1>
+            <div>
+              <pre>Field Constraint</pre>
+              <pre class="code">e.g. { "zip" : "94114" }</pre>
+            </div>
+            <div>
+              <pre>Dot Notation<span class="tip"><a href="http://docs.mongodb.org/manual/core/document/" target="_blank">reference</a></span></pre>
+              <pre class="code">e.g. { "author.firstname" : "Jackie" }</pre>
+            </div>
+            <div>
+              <pre>Value in an Array</pre>
+              <pre class="code">e.g. { "nicknames": "Liz" }</pre>
+              <pre class="code">     // "nicknames" array contains "Liz"</pre>
+            </div>
+            <div>
+              <pre>System-generated Object IDs<span class="tip"><a href="http://docs.mongodb.org/manual/reference/mongodb-extended-json/" target="_blank">reference</a></span></pre>
+              <pre class="code">e.g. { "_id": { "$oid":"4c32420f2f59bce80013371f" } }</pre>
+            </div>
+            <div>
+              <pre>Regular Expressions<span class="tip"><a href="http://docs.mongodb.org/manual/reference/operator/regex/" target="_blank">reference</a></span></pre>
+              <pre class="code">e.g. { "genre": { "$regex":"Hip.*Hop",</pre>
+              <pre class="code">                  "$options":"i" } }</pre>
+            </div>
+            <div>
+              <pre><span class="op">$or</span></pre>
+              <pre class="code">e.g. { "$or" : [ {"zip": 94114}, {"area": 415} ] }</pre>
+            </div>
+            <div>
+              <pre><span class="op">$not</span><span class="tip">negation of $ operators</span></pre>
+              <pre class="code">e.g. { "children" : { "$not" : {"$size":1 } } }</pre>
+            </div>
+            <div>
+              <pre>Conditional Operators</pre>
+              <div>
+                <pre><span class="op">$gt</span>  - greater than &lt;value&gt;, <span class="op">$lt</span> - less than &lt;value&gt;,</pre>
+                <pre><span class="op">$gte</span> - greater than or equal to &lt;value&gt;,</pre>
+                <pre><span class="op">$lte</span> - less than or equal to &lt;value&gt;</pre>
+                <pre class="code">e.g. { "size" : {"$lt": 3} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$ne</span> - not equals &lt;value&gt;</pre>
+                <pre class="code">e.g. { "status" : {"$ne": "complete"} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$mod</span> - mod &lt;divisor&gt; is &lt;value&gt;</pre>
+                <pre class="code">syntax: { &lt;field&gt; : {"$mod":[&lt;divisor&gt;, &lt;value&gt;]} }</pre>
+                <pre class="code">e.g. { "size" : {"$mod": [10, 1]} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$in</span> - in &lt;array&gt;, <span class="op">$nin</span> - not in &lt;array&gt;</pre>
+                <pre class="code">e.g. { "size" : {"$in": [1, 2, 3]} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$exists</span> - field present or missing</pre>
+                <pre class="code">e.g. { "nicknames" : {"$exists": false} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$type</span> - BSON type<span class="tip"><a href="http://docs.mongodb.org/manual/reference/operator/type/#op._S_type" target="_blank">reference</a></span>is &lt;type number&gt;</pre>
+                <pre class="code">e.g. { "name" : {"$type": 2} }</pre>
+                <pre class="code">     // matches if "name" is a String</pre>
+              </div>
+              <div>
+                <pre><span class="op">$all</span> - array matches all of the elements in &lt;array&gt;</pre>
+                <pre class="code">e.g. { "nicknames": { "$all": ["Liz", "Beth"] } }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$size</span> - array has specified # of elements</pre>
+                <pre class="code">e.g. { "nicknames" : {"$size": 3} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$elemMatch</span> - array matches criteria<span class="tip"><a href="http://www.mongodb.org/display/DOCS/Dot+Notation+(Reaching+into+Objects)#DotNotation%28ReachingintoObjects%29-ArrayElementbyPosition" target="_blank">full example</a></span></pre>
+                <pre class="code">e.g. { "f": {"$elemMatch": {"s":"dot","c":"red"}} }</pre>
+              </div>
+              <div>
+                <pre><span class="op">$near</span> - ordered by distance from [ lat, long ]<span class="tip"><a href="http://docs.mongodb.org/manual/reference/operator/near/#op._S_near" target="_blank">docs</a></span></pre>
+                <pre class="code">e.g. { "loc": {"$near": [ 38, -122 ] } }</pre>
+              </div>
+            </div>
+            <h1>
+              Subset of Fields - Quick Reference<span class="tip"><a href="http://docs.mongodb.org/manual/reference/operator/#projection-operators" target="_blank">docs</a></span>
+            </h1>
+            <div>
+              <pre><span class="op">$slice</span> - retrieve a subset of elements in an array</pre>
+              <pre class="code">e.g. { "nicknames" : { "$slice" : 2} }</pre>
+            </div>
+          </div>
+          <div class="specificHelp roundedCorners" style="display: none;">
+	    <span class="helpIcon"></span>
+            <h1>Unique</h1>
+            <p>
+              A unique flag of <code>true</code> signifies a unique index. The <code>_id_</code> index is always unique.
+            </p>
+            <p>
+              Parentheses indicate an implicit value. Documents representing index definitions do not explicitly include <code>unique: false</code>, so the value of unique is "(false)."
+            </p>
+          </div>
+          <div class="specificHelp roundedCorners" style="display: none;">
+	    <span class="helpIcon"></span>
+            <h1>Sparse</h1>
+            <p>
+              A sparse flag of <code>true</code> signifies a sparse index, which
+              only contains documents with the indexed field.  When sorting or
+              filtering on a sparsely indexed field, any documents that are
+              missing that field will be omitted from the query results.
+            </p>
+            <p>
+              Note that a sparse index can only have one field.
+            </p>
+            <p>
+              Parentheses indicate an implicit value. Documents representing index definitions do not explicitly include <code>sparse: false</code>, so the value of sparse is "(false)."
+            </p>
+          </div>
+          <div class="specificHelp roundedCorners" style="display: none;">
+	    <span class="helpIcon"></span>
+            <h1>Min / Max</h1>
+            <p>
+              If <code>min</code> and <code>max</code> are blank, the index assumes lattitude/longitude and is thus configured for a -180 to 180 value range.
+            </p>
+          </div>
+
+        </div> <!-- END #sidebar -->
+        <div class="clearer"></div>
+    </div></div> <!-- END #body -->
+
+    
+
+
+<div id="preFooterBar">
+  <div class="wrap">
+    <div class="logo">
+      <a href="https://mongolab.com/"><img src="./MongoLab  MongoDB-as-a-Service_files/mongolab-logo-146x38.png" height="38" width="146" alt="MongoLab"></a>
+    </div>
+    <div class="links marketingContent" style="display: none;">
+      <span class="message">Get 500 MB <strong>FREE</strong></span>
+      <a href="https://mongolab.com/signup" class="signup">Sign up</a>
+    </div>
+    <div class="clearer"></div>
+  </div>
+</div>
+
+
+
+  
+    <div id="footer">
+  <div class="wrap">
+    <div class="siteLinks">
+      <ul>
+        <li>
+          <strong>Company</strong>
+          <ul>
+            <li class="marketingLinks"><a href="https://mongolab.com/company">About MongoLab</a></li>
+            <li><a href="http://blog.mongolab.com/" target="_blank">Blog</a></li>
+            <li><a href="http://mongolab.org/" target="_blank">Open-source Projects</a></li>
+          </ul>
+        </li>
+        <li class="marketingLinks">
+          <strong>Products</strong>
+          <ul>
+            <li><a href="https://mongolab.com/products">Product Overview</a></li>
+            <li><a href="https://mongolab.com/products/pricing">Plans &amp; Pricing</a></li>
+            <li><a href="https://mongolab.com/products/architecture">Technical Architecture</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Support</strong>
+          <ul>
+            <li><a href="http://status.mongolab.com/" target="_blank">MongoLab Status</a></li>
+            <li><a href="https://support.mongolab.com/" target="_blank">Documentation</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=support@mongolab.com" target="_blank">Ask a Question</a></li>
+          </ul>
+        </li>
+        <li class="share">
+          <strong>Community</strong>
+          <ul>
+            <li>
+              <a style="margin-right:3px;" href="https://twitter.com/mongolab" target="_blank"><img src="./MongoLab  MongoDB-as-a-Service_files/icon_twitter.png" width="26" height="26"></a>
+              <a style="margin-right:3px;" href="https://www.facebook.com/MongoLab" target="_blank"><img src="./MongoLab  MongoDB-as-a-Service_files/icon_facebook.png" width="26" height="26"></a>
+              <a href="https://plus.google.com/101536713548676687538" target="_blank"><img src="./MongoLab  MongoDB-as-a-Service_files/icon_googleplus.png" width="24" height="24" style="margin-left:2px; margin-bottom:2px;"></a>
+            </li>
+          </ul>
+        </li>
+<li><font size="1"><a href="https://safeharbor.export.gov/list.aspx" target="_blank">We self-certify <br>compliance with:</a></font>
+          <a href="http://export.gov/safeharbor/" target="_blank"><img src="./MongoLab  MongoDB-as-a-Service_files/safe-harbor.png" alt="U.S.-EU &amp; U.S.-Swiss Safe Harbor"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="clearer"></div>
+    <div class="powered">
+      <a href="http://mongodb.org/" target="_blank"><img src="./MongoLab  MongoDB-as-a-Service_files/powered-by-mongoDB.png" alt="powered by MongoDB"></a>
+    </div>
+    <div class="copyright">
+      © 2013 <a style="margin-left:0px;" href="http://objectlabs.com/" target="_blank">ObjectLabs Corporation</a> <a href="https://mongolab.com/company/legal/tos">Terms of Service</a><a href="https://mongolab.com/company/legal/privacy">Privacy Policy</a>
+    </div>
+    <div class="clearer"></div>
+  </div>
+</div>
+<script type="text/javascript">
+  // SnapEngage widget
+  // (please note additional changes to this widget in portal's footer.jsp file)
+  document.write(unescape("%3Cscript src='" + ((document.location.protocol=="https:")?"https://snapabug.appspot.com":"http://www.snapengage.com") + "/snapengage-mongolab.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="https://snapabug.appspot.com/snapengage-mongolab.js" type="text/javascript"></script><script type="text/javascript">
+  SnapABug.setButton("/css/images/button-snapengage.gif");
+  SnapABug.addButton("43487a64-584c-49c5-a8c9-1766b6316043","1","252px");
+
+  //console.log(window.location.hostname);
+
+  var domain = window.location.hostname
+  if (domain.indexOf("mongolab.com") !== -1) {
+
+  // Google Analytics tracker for mongolab.com
+  if (_gaq == undefined) {
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-307557-3']);
+    _gaq.push(['_trackPageview']);
+  }
+  else {
+    _gaq.push(['_trackPageview']);
+  }
+  }
+  else {
+    console.debug("Did not push trackPageview to GA b/c domain doesn't contain mongolab.com...")
+  }
+
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+  
+  
+
+
+<!-- if logged in hide signup-related links-->
+
+  <script type="text/javascript">hideSignupRelatedLinks();</script>
+
+
+<!-- hide products/pricing pages if it's not ok to see them -->
+
+
+<!-- set user email in SnapEngage widget -->
+
+  <script type="text/javascript">
+    SnapABug.setUserEmail('jamesbarney71@gmail.com', true);
+    
+  </script>
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+
+    //
+    // validate forms
+    //
+    validateForm("#createDialog");
+    validateForm("#renameDialog");
+    validateForm("#createIndexDialog");
+
+    $("#saveSearchDialog").validate({
+      submitHandler: function() {
+        ajaxSaveSearch();
+      }
+    });
+
+    //
+    // set flags depending on whether q, s and f params were empty
+    //
+    var qFlag = false;
+    var sFlag = false;
+    var fFlag = false;
+    if (false) qFlag = true;
+    if (false) sFlag = true;
+    if (false) fFlag = true;
+
+
+    //
+    // if any of the search box params are non-empty, show the
+    // search box and set up search box toggle
+    //
+    if (qFlag || sFlag || fFlag) {
+      $("#sortOrder").val("");
+      $("#fields").val("");
+
+      showSearch();
+    }
+
+    //$("#hideSearchCriteriaBtn").click(function() {
+    //  hideSearch();
+    //});
+
+    //$("#showSearchCriteriaBtn").click(function() {
+    //  showSearch();
+    //});
+
+    //
+    // set the hidden input fields (need this for changing pageSize, e.g.)
+    // set textarea for CodeMirror to pick up
+    //
+    var query;
+    if (qFlag) {
+      if (true) {
+        query = "";
+      }
+      else {
+        query = '';
+      }
+      $("input[name='q']").val(query);
+      $("textarea#query").val(query);
+    }
+    if (sFlag) {
+      if (true) {
+        query = "";
+      }
+      else {
+        query = '';
+      }
+      $("input[name='s']").val(query);
+      $("textarea#sortOrder").val(query);
+    }
+    if (fFlag) {
+      if (true) {
+        query = "";
+      }
+      else {
+        query = '';
+      }
+      $("input[name='f']").val(query);
+      $("textarea#fields").val(query);
+    }
+
+    //
+    // open the json editors for the search box and command
+    //
+    openCodeMirrorEditor("#searchForm", "query", "", true, "95%", "135px");
+    openCodeMirrorEditor("#searchForm", "sortOrder", "", false, "100%", "60px");
+    openCodeMirrorEditor("#searchForm", "fields", "", false, "100%", "60px");
+
+    $("#searchForm").data("sortOrder").on("focus", function(cm) {
+        if (cm.getValue().indexOf("e.g.") == 0) {
+            cm.setValue("")
+        }});
+
+    $("#searchForm").data("fields").on("focus", function(cm) {
+        if (cm.getValue().indexOf("e.g.") == 0) {
+            cm.setValue("")
+        }});
+
+
+    //
+    // function for showing search box
+    //
+    function showSearch() {
+      $("#searchQuery").show();
+      refreshEditors();
+      //$("#hideSearchCriteriaBtn").show();
+      //$("#showSearchCriteriaBtn").hide();
+
+      $(".generalHelp.documentsSearch").show();
+      $(".generalHelp.documents").hide();
+    }
+
+    //
+    // function for hiding search box
+    //
+    function hideSearch() {
+      $("#searchQuery").hide();
+      //$("#hideSearchCriteriaBtn").hide();
+      //$("#showSearchCriteriaBtn").show();
+
+      $(".generalHelp.documentsSearch").hide();
+      $(".generalHelp.documents").show();
+    }
+
+    //
+    // function for clearing the search box
+    //
+    function clearSearchForm(editorId) {
+      $(editorId).data("query").setValue("");
+      $(editorId).data("sortOrder").setValue('e.g. { "name":1 }');
+      $(editorId).data("fields").setValue('e.g. { "name":1, "email":1 }');
+    }
+
+    //
+    // function for submitting the search form
+    //
+    function submitSearchForm(editorId) {
+
+      if (setHiddenInputField(editorId, "query", "q") &&
+        setHiddenInputField(editorId, "sortOrder", "s") &&
+        setHiddenInputField(editorId, "fields", "f")) {
+        $("#searchForm").submit();
+      }
+      else {
+        openDialog("#jsonErrorDialog", null);
+      }
+    }
+
+//
+// refresh search boxes (CodeMirror needs this for display:none elements)
+//
+function refreshEditors() {
+    if ($("#searchForm").data("query") != undefined) {
+        $("#searchForm").data("query").refresh();
+    }
+    if ($("#searchForm").data("sortOrder") != undefined) {
+        $("#searchForm").data("sortOrder").refresh();
+    }
+    if ($("#searchForm").data("fields") != undefined) {
+        $("#searchForm").data("fields").refresh();
+    }
+}
+
+
+    //
+    // helper function for submitSearchForm
+    //
+    function setHiddenInputField(editorId, editor, inputName) {
+      var queryStr = $(editorId).data(editor).getValue();
+
+      if (queryStr.indexOf("e.g.") == 0) {
+        queryStr = "";
+      }
+      else if (queryStr.replace(/\s/g,"") == "") {
+        queryStr = "";
+      }
+
+      try {
+        if (queryStr == "") {
+          $("input[name='"+inputName+"']").val("");
+        }
+        else {
+          // validates the queryStr & converts it into an object
+          // to get rid of formatting characters
+          var queryObj = JSON.parse(queryStr);
+          $("input[name='"+inputName+"']").val(JSON.stringify(queryObj));
+        }
+
+        return true;
+      }
+      catch (e) {
+        return false;
+      }
+    }
+
+    var totalCount = 1;
+
+    
+      var lastPageNum = 0;
+    
+    
+
+
+    function gotoLastPage() {
+        // Show warning if total count is more than 300,000 records
+        if(totalCount > 300000){
+            showConfirmDialog("You are about to skip through a large " +
+                              "set of search results. This has the potential to kick-off an extremely long-running query which could significantly impact performance. <br/><br/>Are you absolutely sure you want to continue?", doGotoLastPage, "WARNING!");
+        }else{
+            doGotoLastPage();
+        }
+
+    }
+    function doGotoLastPage() {
+        gotoPage(lastPageNum);
+    }
+    function gotoPage(p) {
+       var url = location.pathname;
+       url += "?pageSize="+10;
+       
+       
+       
+       url += "&pageNum="+p;
+       location.href = url;
+    }
+
+    //
+    // list mode vs. table mode
+    //
+    var mode = "";
+    if (mode == "table") {
+      $("input[value='table']").attr("checked", "checked");
+      tableMode(false);
+    } else {
+      $("input[value='list']").attr("checked", "checked");
+      listMode(false);
+    }
+
+    $("input[value='list']").click(function () {
+      listMode(true);
+    });
+    $("input[value='table']").click(function () {
+      tableMode(true);
+    });
+
+    function listMode(sync) {
+      $("#listMode").show();
+      $("#tableMode").hide();
+
+      $("#editViewLink").show();
+
+      $(".paginatorNav").css('margin-right', '20px');
+
+      if (sync) {
+        ajaxSetMode("list");
+      }
+    }
+
+    function tableMode(sync) {
+      $("#tableMode").show();
+      $("#listMode").hide();
+
+      if (true) {
+        $("#editViewLink").hide();
+      }
+
+      $(".paginatorNav").css('margin-right', '0');
+
+      if (sync) {
+        ajaxSetMode("table");
+      }
+    }
+
+    function ajaxSetMode(mode) {
+      var request = new XMLHttpRequest();
+      request.open("POST", "/setcollectionviewmode", true); // asynchronous
+      request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      var data = { "db" : "challenge_u_tester",
+                   "cname" : "users",
+                   "viewMode" : mode };
+      
+      
+      request.send(JSON.stringify(data));
+    }
+
+    //
+    // open dialog for editing table view
+    //
+    function openEditTableViewEditor(event) {
+      
+        
+        
+        
+          var i = '{ "_id" : "id" }';
+        
+      
+      openEditorDialog("#editViewDialog", "tableViewDefTextarea", i, "325px", "425px", event);
+      $( "#editViewDialog" ).dialog( "option", "width", 650 );
+    }
+
+    //
+    // narrow width vs. wide width
+    //
+    width = "";
+    if (width == "wide") {
+      hideSidebar(false);
+    } else {
+      showSidebar(false);
+    }
+
+    $("#.sidebarBtn.hide").click(function () {
+      hideSidebar(true);
+    });
+    $("#.sidebarBtn.show").click(function () {
+      showSidebar(true);
+    });
+
+    function hideSidebar(sync) {
+      $("#sidebar").hide();
+      $("#colWrapper").css('width', 'auto');
+      $("#mainCol").css('width', '100%');
+
+      $(".sidebarBtn.hide").hide();
+      $(".sidebarBtn.show").show();
+
+      if (sync) {
+        ajaxSetWidth("wide");
+      }
+    }
+
+    function showSidebar(sync) {
+      $("#sidebar").show("slow");
+      $("#colWrapper").css('width', '1182px'); // matches main.css
+      $("#mainCol").css('width', '717px'); // matches file's inline css
+      $("#sidebar").css('width', '357px'); // matches file's inline css
+
+      $(".sidebarBtn.hide").show();
+      $(".sidebarBtn.show").hide();
+
+      if (sync) {
+        ajaxSetWidth("narrow");
+      }
+    }
+
+    function ajaxSetWidth(width) {
+    var request = new XMLHttpRequest();
+    request.open("POST", "/setcollectionpanelwidth", true);
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    var data = { "db" : "challenge_u_tester", "cname" : "users", "panelWidth" : width };
+    
+    
+    request.send(JSON.stringify(data));
+    }
+
+    $("#savedSearchSelection").change(function () {
+
+      // get selected search name
+      var searchName = $("#savedSearchSelection").val();
+
+      // pre-populate save search form with search name
+      if (searchName != "[new search]") {
+        $("input[name='searchName']").val(searchName);
+      } else {
+        searchName = "";
+      }
+
+      // change text for first item of drop-down
+      $("#noSavedSearchOption").text("--- reset page ---");
+
+      // if user selects the first option
+      if ($("#noSavedSearchOption:selected").val() != undefined) {
+        resetPage();
+      }
+
+      if (searchName != "") {
+        
+      }
+      else {
+        clearSearchForm('#searchForm');
+      }
+
+      showSearch();
+      $("#searchResults").hide();
+      $("#emptySearchResults").show();
+    });
+
+    var searchNames = [];
+    
+
+    $("input[name='searchName']").autocomplete({
+      source: searchNames
+    });
+
+    function resetPage() {
+      var url = location.pathname;
+      var params = getUrlParams();
+      delete params["searchName"];
+      location.href = url + serializeUrlParams(params);
+    }
+
+    function openSaveSearchDialog(event) {
+
+      try {
+        var searchObj = generateSearchObj();
+      }
+      catch (e) {
+        openDialog("#jsonErrorDialog", null);
+        return false;
+      }
+
+      openDialog('#saveSearchDialog', event);
+    }
+
+    function ajaxSaveSearch() {
+
+      var searchName = $("#saveSearchDialog input[name='searchName']").val();
+      var searchStr = "";
+
+      if (searchName != "") {
+        try {
+          var searchObj = generateSearchObj();
+          searchStr = JSON.stringify(searchObj);
+        }
+        catch (e) {
+          openDialog("#jsonErrorDialog", null);
+          return;
+        }
+
+        var request = new XMLHttpRequest();
+        request.open("POST", "/setcollectionsearches", false); // must be synchronous
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        var data = { "db" : "challenge_u_tester", "cname" : "users", "searchName" : searchName, "searchStr": searchStr };
+        
+        
+        request.send(JSON.stringify(data));
+
+        location.href='?searchName='+encodeURIComponent(searchName);
+      }
+      else {
+        window.location.reload()
+      }
+    }
+
+    function generateSearchObj() {
+
+      var qStr = $("#searchForm").data("query").getValue();
+      var sStr = $("#searchForm").data("sortOrder").getValue();
+      var fStr = $("#searchForm").data("fields").getValue();
+
+      if (qStr.replace(/\s/g,"") == "") {
+        qStr = "";
+      }
+      if ( (sStr.replace(/\s/g,"") == "") || (sStr.indexOf("e.g.") == 0) ) {
+        sStr = "";
+      }
+      if ( (fStr.replace(/\s/g,"") == "") || (fStr.indexOf("e.g.") == 0) ) {
+        fStr = "";
+      }
+
+      var qObj = null;
+      var sObj = null;
+      var fObj = null;
+
+      try {
+        if (qStr != "") { qObj = JSON.parse(qStr); }
+        if (sStr != "") { sObj = JSON.parse(sStr); }
+        if (fStr != "") { fObj = JSON.parse(fStr); }
+      }
+      catch (e) {
+        throw e;
+      }
+
+      var searchObj = {};
+      if (qObj) { searchObj["q"] = qObj; }
+      if (sObj) { searchObj["s"] = sObj; }
+      if (fObj) { searchObj["f"] = fObj; }
+
+      return searchObj;
+
+    }
+
+    function ajaxDeleteSearch(searchName, e) {
+
+      if (e != null) {
+	  if (!e) var e = window.event;
+          e.cancelBubble = true;
+	  if (e.stopPropagation) {
+	      e.stopPropagation();
+          }
+      }
+
+      var request = new XMLHttpRequest();
+      request.open("POST", "/setcollectionsearches", false); // must be synchronous
+      request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      var data = { "db" : "challenge_u_tester", "cname" : "users", "searchName" : searchName, "op" : "delete"};
+      
+      
+      request.send(JSON.stringify(data));
+    }
+
+
+    //
+    // called when CodeMirror is done loading
+    //
+    function initCallback() {
+
+      if ( false ) {
+        // fill in text boxes with saved search
+        $("#savedSearchSelection").change();
+      }
+      else {
+        $("#searchResults").show();
+      }
+    }
+
+    //
+    // called the first time focus is brought to the json editor
+    //
+    function removeContentOnFocus (ed) {
+    if (ed.getValue().indexOf("e.g.") == 0) {
+      ed.setValue("");
+    }
+    if (ed.win.addEventListener) {
+      ed.win.removeEventListener('focus', function() {removeContentOnFocus(ed);}, false);
+    }
+    else { // IE
+      ed.win.detachEvent('onfocus', function() {removeContentOnFocus(ed);});
+    }
+    ed.win.onfocus = null;
+
+    }
+
+    //
+    // Document Link
+    //
+
+    function openDocument(id) {
+        location.href = getDocumentLink(id);
+    }
+
+    function getDocumentLink(id) {
+      // get url without trailing slash(es)
+      var url = location.pathname.replace( /\/*$/, '' );
+      // encode document ID except for slashes (Tomcat rejects any URL with encoded slashes)
+      url += '/'+encodeURIComponent(id).replace(/%2F/g, "/")+'?';
+      
+        url += 'pageSize='+'10&';
+      
+      
+        url += 'pageNum='+'0&';
+      
+      
+        url += 'totalCount='+'1&';
+      
+      
+      
+      
+      return url;
+    }
+
+
+    //
+    // NOTE: IE requires the following to be initialized AFTER the
+    //       DOM is fully loaded
+    // 1) Dialogs
+    // 2) Tabs
+    //
+    $(document).ready(function() {
+
+      $("tr[rel]").overlay({ mask: { color: null } });
+      $("td[rel]").overlay({ mask: { color: null } });
+
+    //
+    // Initialize dialogs
+    //
+    initDialog("#createDialog", "Create");
+    initDialog("#renameDialog", "Rename");
+    initDialog(".deleteDialog", "Delete");
+    initEditorDialog("#editViewDialog", "tableViewDefTextarea", "json", "Submit");
+    initDialog("#saveSearchDialog", "Save");
+    initMsgDialog("#viewSearchesDialog", "auto", "auto");
+    initMsgDialog("#jsonErrorDialog");
+    initMsgDialog("#cappedDeleteInfo");
+    addLoadingIndicator();
+
+    //
+    // Set up jQuery UI tabs
+    //
+
+    // initialize tabs
+    $("#tabs").tabs();
+    $("#subtabs").tabs();
+
+    // select starting tab and show appropriate help
+    $(".generalHelp").hide();
+    var lastSubTabIndex = $("#subtabs").tabs().tabs('length') - 1;
+    if (location.hash == '') {
+      $("#tabs").tabs({ selected: 0 });
+      $(".generalHelp.documents").show();
+    }
+    else {
+      $(".generalHelp." + location.hash.substring(1)).show();
+    };
+
+    if (location.hash == '#tools') {
+      var lastSubTabIndex = $("#subtabs").tabs().tabs('length') - 1;
+      $("#subtabs").tabs({ selected: lastSubTabIndex });
+    }
+
+    // if Objects tab, show appropriate help
+    if($("#tabs").tabs('option', 'selected') == 0) {
+      if ($("#searchLabel").html() == "Hide search") {
+        $(".generalHelp.documentsSearch").show();
+        $(".generalHelp.documents").hide();
+      }
+      else {
+        $(".generalHelp.documents").show();
+        $(".generalHelp.documentsSearch").hide();
+      }
+    };
+
+    // update URL with hash for tab
+    $("#tabs").bind('tabsselect',function(event, ui) {
+      window.location = ui.tab;
+    })
+
+    // show contents of tabs only after they're ready
+    $("#tabs ul").show();
+    $("#tools").show();
+    $("#stats").show();
+    $("#indexes").show();
+    $("#documents").show();
+
+    // handler for tab onshow event (when user switches tabs)
+    $("#tabs").tabs( {show: function (event, ui) {
+
+      // if Tools tab
+      if(ui.index == 3) {
+        $(".generalHelp.tools").show();
+        $(".generalHelp.stats").hide();
+        $(".generalHelp.indexes").hide();
+        $(".generalHelp.documents").hide();
+
+        $(".generalHelp.documentsSearch").hide();
+      }
+      // if Stats tab
+      else if(ui.index == 2) {
+        $(".generalHelp.tools").hide();
+        $(".generalHelp.stats").show();
+        $(".generalHelp.indexes").hide();
+        $(".generalHelp.documents").hide();
+
+        $(".generalHelp.documentsSearch").hide();
+      }
+      // if Documents tab
+      else if (ui.index == 0) {
+        $(".generalHelp.tools").hide();
+        $(".generalHelp.stats").hide();
+        $(".generalHelp.indexes").hide();
+
+        // if search box visible
+        if ($("#searchLabel").html() == "Hide search") {
+          $(".generalHelp.documentsSearch").show();
+        }
+        else {
+          $(".generalHelp.documents").show();
+        }
+      }
+      // if Indexes tab
+      else {
+        $(".generalHelp.tools").hide();
+        $(".generalHelp.stats").hide();
+        $(".generalHelp.indexes").show();
+        $(".generalHelp.documents").hide();
+        $(".generalHelp.documentsSearch").hide();
+      }
+    }});
+
+    // set the hrefs of all document links
+    $(".documentLink").each( function () {
+        // document id = element.id without the 'doc_link_' prefix
+        documentId = this.id.substring(9)
+        this.href = getDocumentLink(documentId)
+    });
+
+    // prettify document fields
+    $(".documentField").each(function() {
+      var val = $(this).html();
+      // date?
+      var dates = val.match(/\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ/g);
+      if(dates) {
+        $(this).attr("title", val);
+        for(var i = 0; i < dates.length; i++) {
+          var d = dates[i];
+          var dateVal = new Date(d);
+          val = val.replace(d, dateVal.toLocaleDateString()+" "+dateVal.toTimeString());
+        }
+        $(this).html(val);
+      }
+    });
+
+    // bind specific help
+    bindSpecificHelp( $("#indexTable tr *:nth-child(3)"), 'Unique');
+    bindSpecificHelp( $("#indexTable tr *:nth-child(4)"), 'Sparse');
+
+    refreshEditors();
+
+    });
+
+  </script><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul>
+
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-createIndexDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-createIndexDialog" unselectable="on">Add new index</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form action="https://mongolab.com/createindex" method="POST" id="createIndexDialog" style="" class="ui-dialog-content ui-widget-content">
+  <input type="hidden" name="r" value="/databases/challenge_u_tester/collections/users?saved=1385023528898&amp;q=&amp;s=&amp;f=&amp;pageNum=0&amp;pageSize=10">
+
+  
+  
+  <input type="hidden" name="db" value="challenge_u_tester">
+  <input type="hidden" name="collection" value="users">
+  <input type="hidden" name="tab" value="#indexes">
+  <input type="hidden" name="pageSize" value="10">
+  <input type="hidden" name="pageNum" value="0">
+  <input type="hidden" name="q">
+  <input type="hidden" name="s">
+  <input type="hidden" name="f">
+  
+    
+  
+
+
+
+  
+
+
+  <div>
+    <div class="f-left" style="margin-right: 15px">
+      <textarea id="indexTextArea" style="display: none;" class="ui-corner-all"></textarea>
+      <input type="hidden" name="json" id="indexJson">
+      <div style="margin-top: 20px; margin-bottom: 30px;">
+        <table class="indexOptionsTable">
+          <tbody><tr>
+            <th>
+              <label>Options:</label>
+            </th>
+            <td>
+              <label style="display: inline;">Unique</label>
+              <input type="checkbox" name="unique">
+              <label style="display: inline; padding-left: 30px;">Sparse</label>
+              <input type="checkbox" name="sparse">
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <label>Custom name:</label>
+            </th>
+            <td>
+              <input type="text" name="name" maxlength="103" value="" class="ui-corner-all">
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </div>
+    <div>
+      <p>
+        To create a simple index on the "foo" field:
+        </p><pre>  { "foo" : 1 }</pre>
+      <p></p>
+      <p>
+        To create a compound index on both the "foo" and "bar"
+        fields, with "bar" sorted in descending order:
+        </p><pre>  { "foo" : 1, "bar": -1 }</pre>
+      <p></p>
+      <p>
+        Check the <em>Unique</em> option to enforce uniqueness on the
+        specified field(s).  Please note that you cannot create a
+        unique index on a collection that already contains a set
+        of objects that violate such a uniqueness constraint.
+      </p>
+      <p>
+        Check the <em>Sparse</em> option to create an index that omits any
+        documents that are missing the specified field.  A sparse
+        index must contain only one field.
+      </p>
+      <p>
+        You may specify a <em>Custom name</em> for your index if you wish.
+        Otherwise, MongoDB will generate a name automatically.
+      </p>
+      <p>
+        For more detailed information about indexes, please see the
+        official MongoDB documentation
+        <a href="http://docs.mongodb.org/manual/core/indexes/" target="_blank">here</a>.
+      </p>
+    </div>
+  </div>
+</form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Create in background</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-renameDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-renameDialog" unselectable="on">Rename collection</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form action="https://mongolab.com/renamecollection" method="POST" id="renameDialog" autocomplete="off" style="" class="ui-dialog-content ui-widget-content">
+
+                
+
+                
+                  
+                
+
+
+
+  
+
+
+
+                <fieldset>
+                  <div>
+                    Your collection is currently named "users".  What would you like to rename it to?
+                  </div>
+                  <div>
+                    <label>Collection name<span class="required"></span></label>
+                    <input class="required collectionName ui-corner-all" type="text" name="collection">
+                  </div>
+                </fieldset>
+                
+                
+                <input type="hidden" name="db" value="challenge_u_tester">
+                <input type="hidden" name="oldName" value="users">
+                  <input type="hidden" name="r" value="/databases/challenge_u_tester/collections/users?saved=1385023528898&amp;q=&amp;s=&amp;f=&amp;pageNum=0&amp;pageSize=10">
+              </form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Rename</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-clearCollectionDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-clearCollectionDialog" unselectable="on">Delete all documents</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form id="clearCollectionDialog" action="https://mongolab.com/clearcollection" method="POST" class="deleteDialog ui-dialog-content ui-widget-content" style="">
+                        <span class="ui-icon ui-icon-alert"></span>
+                        <span>All documents in this collection</span>
+                        
+                        
+                        <input type="hidden" name="db" value="challenge_u_tester">
+                          <input type="hidden" name="collection" value="users">
+                          <input type="hidden" name="r" value="/databases/challenge_u_tester/collections/users?saved=1385023528898&amp;q=&amp;s=&amp;f=&amp;pageNum=0&amp;pageSize=10">
+                      </form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Delete</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-deleteDialog0" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-deleteDialog0" unselectable="on">Delete confirmation</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form action="https://mongolab.com/deletedocument" method="POST" id="deleteDialog0" class="deleteDialog ui-dialog-content ui-widget-content" style="">
+					<span class="ui-icon ui-icon-alert"></span>
+					<span>Object 528da2ad3b2c4661a6000004</span>
+					
+					
+					<input type="hidden" name="db" value="challenge_u_tester">
+					<input type="hidden" name="collection" value="users">
+					<input type="hidden" name="id" value="{ &quot;$oid&quot; : &quot;528da2ad3b2c4661a6000004&quot;}">
+					
+					<input type="hidden" name="pageSize" value="10">
+					<input type="hidden" name="pageNum" value="0">
+					<input type="hidden" name="totalCount" value="1">
+					<input type="hidden" name="q">
+					<input type="hidden" name="s">
+					<input type="hidden" name="f">
+					<input type="hidden" name="r" value="/databases/challenge_u_tester/collections/users?saved=1385023528898&amp;q=&amp;s=&amp;f=&amp;pageNum=0&amp;pageSize=10">
+                                      </form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Delete</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-editViewDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-editViewDialog" unselectable="on">Define a table view for this collection</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form action="https://mongolab.com/editcollectiontableview" method="POST" class="noSubmitOnEnter ui-dialog-content ui-widget-content" id="editViewDialog" style="">
+                      
+                      
+                        
+                      
+
+
+
+  
+
+
+                      <div>
+                      <div class="f-left" style="margin-right: 15px;">
+                        <textarea id="tableViewDefTextarea" class="ui-corner-all">                        </textarea>
+                      </div>
+                      <div>
+                        <p>
+                          You can view your documents in table format by defining a View for this
+                          collection. Views describe how to turn each JSON document (with potentially
+                          nested field values) into a flat set of fields for display as a row in a table.
+                        </p>
+                        <p>
+                          To illustrate, let's say we have a collection with documents that look like
+                          this:
+                          </p><pre>  { "firstName" : "Bob",</pre>
+                          <pre>    "lastName" : "Smith",</pre>
+                          <pre>    "address" : { </pre>
+                          <pre>        "street" : "2447 Mt Royal Rd",</pre>
+                          <pre>        "city" : "Pittsburgh",</pre>
+                          <pre>        "state" : "PA",</pre>
+                          <pre>        "zip" : "15217" } }</pre>
+                        <p></p>
+                        <p>
+                          If you define a a View like this:
+                          </p><pre>  { "Last Name" : "lastName",</pre>
+                          <pre>    "City" : "address.city",</pre>
+                          <pre>    "State" : "address.state" }</pre>
+                        <p></p>
+                        <p>
+                          ... you will get a table view like this:
+                        </p>
+                        <div class="tableMode">
+                          <table style="width: auto; padding-left: 15px;">
+                            <tbody>
+                              <tr class="odd nolink" style="color: #bbb;">
+                                <td>Last Name</td>
+                                <td>City</td>
+                                <td>State</td>
+                              </tr>
+                              <tr class="odd nolink">
+                                <td>Smith</td>
+                                <td>Pittsburgh</td>
+                                <td>PA</td>
+                              </tr>
+                              <tr class="even nolink">
+                                <td>Jones</td>
+                                <td>Scarsdale</td>
+                                <td>NY</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      </div>
+                      <input type="hidden" name="json" id="tableViewDefValue">
+                      
+                      
+                      <input type="hidden" name="db" value="challenge_u_tester">
+                      <input type="hidden" name="collection" value="users">
+                      <input type="hidden" name="pageSize" value="10">
+                      <input type="hidden" name="pageNum" value="0">
+                        <input type="hidden" name="r" value="/databases/challenge_u_tester/collections/users?saved=1385023528898&amp;q=&amp;s=&amp;f=&amp;pageNum=0&amp;pageSize=10">
+                      
+                      
+                      
+                    </form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Submit</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-saveSearchDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-saveSearchDialog" unselectable="on">Save this search</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><form id="saveSearchDialog" style="" class="ui-dialog-content ui-widget-content">
+                  <fieldset>
+                    <div>
+                      NOTE: If you choose a name that already exists (it will appear as an autocomplete option), we will override your existing search.
+                    </div>
+                    <div>
+                        <label>Search name:<span class="required"></span></label><br>
+                        <input class="required mongoDBName ui-autocomplete-input ui-corner-all" type="text" name="searchName" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                    </div>
+                  </fieldset>
+                </form><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Save</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Cancel</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable msgDialog" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-viewSearchesDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-viewSearchesDialog" unselectable="on">Saved searches</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><div id="viewSearchesDialog" style="" class="ui-dialog-content ui-widget-content">
+                  
+                  <table>
+		    <thead>
+		      <tr>
+			<th>Name</th>
+			<th>Search Criteria</th>
+		      </tr>
+		    </thead>
+                    <tbody>
+                      
+                    </tbody>
+                  </table>
+                </div><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">OK</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable msgDialog" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-jsonErrorDialog" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-jsonErrorDialog" unselectable="on">JSON Validation Error</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><div id="jsonErrorDialog" style="" class="ui-dialog-content ui-widget-content">
+  <span class="ui-icon ui-icon-alert"></span>
+  We encountered an error while parsing your JSON.  Please check your syntax (e.g. ensure you are using double quotes around both your field names and values) and try again.
+</div><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">OK</span></button><div class="loadingIndicator"></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable msgDialog" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-cappedDeleteInfo" style="display: none; z-index: 1000; outline: 0px; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix" unselectable="on"><span class="ui-dialog-title" id="ui-dialog-title-cappedDeleteInfo" unselectable="on">Delete not allowed</span><a href="https://mongolab.com/databases/challenge_u_tester/collections/users?saved=1385023528898&q=&s=&f=&pageNum=0&pageSize=10#" class="ui-dialog-titlebar-close ui-corner-all" role="button" unselectable="on"><span class="ui-icon ui-icon-closethick" unselectable="on">close</span></a></div><div id="cappedDeleteInfo" style="" class="ui-dialog-content ui-widget-content">
+      <span class="ui-icon ui-icon-alert"></span>
+      MongoDB does not support deleting from a capped collection (<a href="http://docs.mongodb.org/manual/core/capped-collections/" target="_blank">MongoDB reference</a>).
+    </div><div class="ui-resizable-handle ui-resizable-n" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-e" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-s" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-w" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;" unselectable="on"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;" unselectable="on"></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">OK</span></button><div class="loadingIndicator"></div></div></div></body></html>

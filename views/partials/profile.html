@@ -1,5 +1,76 @@
 
 <div class="content">
-  <h1>User Profile</h1><br/>
-  <p class="lead">Users will be able to see their total accumulated points, completed challenges, and other user information.</p>
+  <br>
+  <br>
+  <br>
+	<img class="img-circle" src="{{currentUser.picURL}}" alt="Profile Picture" height="100" width="100">
+  	<h1 class="offset3 title profiletext">{{currentUser.name}}'s Profile</h1>
+  	<br>
+  	
+  	<div ng-hide="editing" class="well">
+  		<ul class="userlist">
+  			<li>Username: {{currentUser.name}}</li>
+  			<li>Gender: {{currentUser.gender}}</li>
+  			<li>Institution: {{currentUser.institution}}</li>
+  			<li>Year of Graduation: {{currentUser.graduationYear}}</li>
+  			<li>Major: {{currentUser.major}}</li>
+  			<li>Points: {{currentUser.totalScore}}</li>
+  			<li>Challenges Completed: 
+  				<ul ng-repeat="x in currentUser.completedChallenges">
+  					<li>Challenge Name: {{x.name}}</li>
+  				</ul>
+  		</ul>
+  		<button ng-click="editing = true" class="btn">Edit Profile Information</button>
+  	</div>
+
+ 	<div class="well" ng-show="editing">
+	  	Name:
+        <br>
+        <input ng-model="currentUser.name" type="text">
+        <br>
+        Gender:
+        Male <input type="radio" ng-model="currentUser.gender" value="Male">
+        Female <input type="radio" ng-model="currentUser.gender" value="Female">
+        Other <input type="radio" ng-model="currentUser.gender" value="Other">
+        <br>
+        Institution:
+        <br>
+        <input ng-model="currentUser.institution" type="text">
+        <br>
+        Year of Graduation:
+        <br>
+        <input ng-model="currentUser.graduationYear" type="number">
+        <br>
+        Major:
+        <br>
+        <input ng-model="currentUser.major" type="text">
+        <br>
+        <button ng-click="saveChanges(currentUser)" class="btn">Save Changes</button>
+  	</div>
+  	
 </div>
+
+
+<!-- 
+<li class="dropdown" ng-controller="DropdownCtrl">
+  <a class="dropdown-toggle">
+    Click me for a dropdown, yo!
+  </a>
+  <ul class="dropdown-menu">
+    <li ng-repeat="choice in items">
+      <a>{{choice}}</a>
+    </li>
+  </ul>
+</li> 
+-->
+   <!--   
+   		<li class="dropdown">
+        	<a class="dropdown-toggle"><button class="btn">Select Year</button></a>
+        	<ul class="dropdown-menu">
+    			<li ng-repeat="choice in items">
+    			  <a>{{choice}}</a>
+   				 </li>
+ 			 </ul>
+        </li> 
+        -->
+

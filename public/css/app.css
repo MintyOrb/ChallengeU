@@ -2,6 +2,9 @@
 
 
 
+.nav {
+  display: inline;
+}
 .menu li {
   padding: 20px;
   list-style: none;
@@ -14,23 +17,41 @@
     
   }
 
-  .menu {text-align: center;
+  .menu {
+    text-align: center;
   }
-    
-}
 
+}
+.name{
+  margin-left:20px;
+}
+.comment{
+  border:2px solid;
+  border-radius:5px;
+  margin:20px;
+  margin-left:30px;
+}
 .black {
   background-color: #1F1B1B;
 }
 
-p {
+.title {
   color: white;
 }
 
+.userlist {
+  list-style: none;
+  font-weight: bold;
+}
 .iconstyle {
   color:white;
-  
 }
+.profiletext {
+  margin-top: -80px;
+  padding-bottom: 50px;
+}
+  
+
 .iconstyle:hover {
   text-decoration: none;
   color:#999999;
@@ -44,6 +65,16 @@ p {
 .top {
   color:white;
   font-family:andale mono, monospace;
+}
+
+.signIn {
+  margin-top: -40px;
+  position: relative;
+}
+.signUp {
+  margin-top: -10px;
+  position: relative;
+
 }
 
 @media (max-width: 767px) {

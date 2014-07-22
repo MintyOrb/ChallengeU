@@ -1,36 +1,36 @@
+
 <!DOCTYPE html>
 <html ng-app="myApp">
   <head>
     <meta charset="utf8" name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
-    <title>Angular Express Seed App</title>
-    <link rel="stylesheet" href="public/css/app.css">
-    <link rel="stylesheet" href="public/css/bootstrap.css">
-    <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
-    <!-- // <script src="public/js/lib/angular/angular.js"></script> -->
-    <script src="public/js/angular.min.js"></script>
-    <script src="public/js/ui-bootstrap-tpls-0.6.0.min.js"></script>
-    <script src="public/js/app.js"></script>
-    <script src="public/js/services.js"></script>
-    <script src="public/js/controllers.js"></script>
-    <script src="public/js/filters.js"></script>
-    <script src="public/js/directives.js"></script>
+    <title>Challenge U</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-cookies.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-0.6.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
   </head>
-  <body class="black">
+  <body class="black" ng-controller="AppCtrl">
       <div class="navbar-inverse navbar-static-top">
         <div class="navbar-inner">
           <h3 class="text-center top">Challenge U </h3>
+          <a href="signup"><button class="btn span 2 offset10 signIn" ng-click="newUser = false" ng-show="!isLoggedin">Sign in</button></a>
+           <button class="btn span 2 offset10 signIn" ng-show="isLoggedin" ng-click="logOut()">Log out</button>
+         <h6 ng-show="!isLoggedin" class="signUp span1 offset10"> <a ng-click="newUser = true" href="signup">Sign up</a></h6>
         </div>
       </div>
         <div class="container-fluid">
           <div class="row-fluid">
             <div class="span2 sidebar-nav-fixed">
               <ul class="menu">
-                <li class="text-center"><a href="home"><i class="icon-magnet icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
-                <li class="text-center"><a href="profile"> <i class="icon-user icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
-                <li class="text-center"><a href="theList"> <i class="icon-list icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
-                <li class="text-center"><a href="settings"> <i class="icon-cogs icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
-                <li class="text-center"><a href="about"> <i class="icon-question icon-3x fixed-width iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="home"><i class="fa fa-magnet fa-3x fa-fw iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a ng-click="viewProf()"> <i class="fa fa-user fa-3x fa-fw iconstyle iconstylehover"></i></a></li>
+                <li class="text-center"><a href="theList"> <i class="fa fa-list fa-3x fa-fw iconstyle iconstylehover"></i></a></li>
               </ul>
             </div>
 

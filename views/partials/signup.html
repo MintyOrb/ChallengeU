@@ -1,0 +1,36 @@
+<div class="well">
+  <div ng-show="newUser">
+    <h3>Create Account:</h3>
+        <form>
+          Name:
+          <br>
+          <input ng-model="user.name" type="text">
+          <br>
+          Password:
+          <br>
+          <input ng-model="passwordTest" type="password">
+          <br>
+          Re-type Password:
+          <br>
+          <input ng-model="user.password" type="password">
+          <br>
+          Gender:
+          Male <input type="radio" ng-model="user.gender" value="Male">
+          Female <input type="radio" ng-model="user.gender" value="Female">
+          Other <input type="radio" ng-model="user.gender" value="Other">
+          <br>
+          <button class="btn" ng-click="signUp(isLoggedin)" type="submit">Sign Up</button>
+        </form>
+  </div>
+  <div ng-show="!newUser">
+      <h3>Log in:</h3>
+        <div>
+            <form class="">
+              <h5>Name:</h5><input ng-model="loginUser.name" type="text" name="username"/>
+              <h5>Password:</h5><input ng-model="loginUser.password" type="password" name="password"/>
+              <br>
+              <button class="btn" ng-click="getUser()" type="submit">Log in</button>
+            </form>
+        </div>
+  </div>
+</div>

@@ -1,7 +1,43 @@
 
 <div class="content">
-  <h1>Choose Your Next Challenge!</h1><br/>
-  <p class="lead">This page will display all of the available challenges. Upon selection a challenge a story will be published to the users facebook feed.</p><br/>
-  <p class="lead">Challenges will be sortable based on difficulty/reward</p>
-  <hr/><img src="/public/img/challenges.jpg" class="offset1"/>
+  	<h1 class="title">Choose Your Next Challenge!</h1><br/>
+    <hr/>
+      <ul class="nav-pills nav">
+        <li><a ng-click="sortBy = 'difficulty'; reverse = !reverse">Difficulty</a></li>
+        <li><a ng-click="sortBy = 'name'; reverse = false">Alphabetical (A-Z)</a></li>
+        <li><a ng-click="sortBy = '-name'; reverse = false">Alphabetical (Z-A)</a></li>
+        <li><a ng-click="sortBy = 'dateCreated'; reverse = !reverse">Date Added</a></li>
+      </ul>
+    <hr/>
+  	<div class="well" ng-repeat="challenge in challenges | orderBy:sortBy:reverse">
+  		<h3>{{challenge.name}}</h3>
+  		<h4>Description: {{challenge.description}}</h4>
+  		<h5>Difficulty: {{challenge.difficulty}}</h5>
+  		<button ng-show="isLoggedin" ng-click="completeChallenge(challenge.name, challenge.difficulty, currentUser._id, currentUser.name)" class="btn">Complete</button>
+  	</div>
+
+ 	<div ng-show="isLoggedin" ng-controller="newChallenge">
+ 		<button class="btn" ng-click="isCollapsed = !isCollapsed">Got a better idea?</button>
+		<hr>
+		<div collapse="isCollapsed">
+ 			<div class="well well-large">
+ 				<h3>New Challenge:</h3>
+ 				<form>
+ 					Name:
+ 					<br>
+ 					<input ng-model="challenge.challengeName" type="text">
+ 					<br>
+ 					Description:
+ 					<br>
+ 					<textarea ng-model="challenge.description" placeholder="Write a description here!"type="		textbox"></textarea>
+ 					Difficulty:
+ 					Easy <input type="radio" ng-model="challenge.difficulty" value="1">
+ 					Medium <input type="radio" ng-model="challenge.difficulty" value="2">
+ 					Hard <input type="radio" ng-model="challenge.difficulty" value="3">
+ 					<button class="btn" ng-click="submit(currentUser.name)" type="submit">Add Challenge</button>
+ 				<!-- fields for new challenge -->
+ 				</form>
+ 			</div>
+ 		</div>
+ 	</div>
 </div>

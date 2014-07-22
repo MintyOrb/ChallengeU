@@ -1,0 +1,33 @@
+
+<div class="content">
+  	<h1 class="title">Story Feed</h1>
+  	<br>
+  	<hr>
+  	<ul class="nav-pills nav">
+  	  <li><a ng-click="sortBy = 'dateCreated'; reverse = !reverse">Most Recent</a></li>
+  	  <li><a ng-click="sortBy = 'numberOfComments'; reverse = !reverse">Activity</a></li>
+  	  <li><a ng-click="showNewUsers = !showNewUsers">New Users</a></li>
+  	  <li><a ng-click="showCompletedChallenges = !showCompletedChallenges">Completed Challenges</a></li>
+  	  <li><a ng-click="showNewChallenges = !showNewChallenges">Created Challenges</a></li>
+  	</ul>
+  	<hr/>
+  	<div  ng-show="story.type === 'newUser' && showNewUsers || story.type === 'newChallenge' && showNewChallenges || story.type === 'completedChallenge' && showCompletedChallenges" class="well" ng-repeat="story in stories | orderBy:sortBy:reverse">
+  		<h3 ng-if=" story.type === 'newChallenge' "><a>{{story.challengeName}} </a> was added as a new challenge!</h3>
+  		<h3 ng-if=" story.type === 'newUser' "><a>{{story.userName}} </a> joined Challenge U! Welcome them below!</h3>
+  		<h3 ng-if=" story.type === 'completedChallenge' "><a>{{story.userName}} </a> completed the <a>{{story.challengeName}}</a> challenge!</h3>
+  		<p class="text-info offset1" ng-show="story.numberOfComments === 0">No comments yet, check back later or add your own!</p>
+  		<div class="comment"ng-repeat="comment in story.comments">
+  			<h6 class="name">{{comment.user}} Says:</h6>
+  			<p class="offset1">{{comment.body}}</p>
+  		</div>
+  		<div ng-show="isLoggedin" ng-controller="leaderBoardCtrl">
+ 		<button class="btn" ng-click="isCollapsed = !isCollapsed">Add your say!</button>
+		<hr>
+		<div collapse="isCollapsed">
+ 			<h3>Comment</h3>
+ 			<textarea ng-model="comment.body" placeholder="Write comment here!" type="textbox"></textarea>
+ 			<br>
+ 			<button class="btn" ng-click="addComment(story, comment)" type="submitAdd">Add Comment</button>
+ 		</div>
+ 	</div>
+</div>
